@@ -460,6 +460,71 @@ p {
   box-shadow: 0 0 20px rgba(8, 216, 255, .7);
 }
 
+.chart-diagram {
+  display: block;
+  margin-top: 24px;
+}
+
+.bar-chart {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 14px;
+  align-items: end;
+  height: 240px;
+  padding: 18px 14px 0;
+  border: 1px solid rgba(255, 255, 255, .12);
+  border-bottom: 2px solid rgba(8, 216, 255, .55);
+  background: rgba(0, 0, 0, .32);
+}
+
+.bar-col {
+  display: grid;
+  grid-template-rows: auto 1fr auto;
+  align-items: end;
+  justify-items: center;
+  height: 100%;
+  gap: 8px;
+}
+
+.bar-value {
+  font-size: 14px;
+  font-weight: 900;
+  color: var(--green);
+}
+
+.bar {
+  display: block;
+  width: 100%;
+  max-width: 64px;
+  align-self: end;
+  border-radius: 4px 4px 0 0;
+  background: linear-gradient(180deg, var(--blue), var(--green));
+  box-shadow: 0 0 18px rgba(8, 216, 255, .35);
+}
+
+.bar-col:last-child .bar {
+  background: linear-gradient(180deg, #ff5b7f, #ff9d3d);
+  box-shadow: 0 0 18px rgba(255, 91, 127, .4);
+}
+
+.bar-col:nth-child(4) .bar {
+  background: linear-gradient(180deg, #ffb347, var(--green));
+}
+
+.bar-label {
+  font-size: 13px;
+  color: var(--muted);
+  text-align: center;
+  line-height: 1.4;
+}
+
+.chart-caption {
+  margin-top: 14px;
+  font-size: 13px;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
 .paper-pick {
   max-width: 980px;
   margin-top: 52px;
