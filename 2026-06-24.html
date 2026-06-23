@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Transformerの生みの親がOpenAIへ。AIの「次の設計図」を探す競争が始まった | AI共創ニュース</title>
+  <meta name="description" content="2026年6月24日のAIニュース。Transformer（『Attention Is All You Need』）の共同発明者で、GoogleのGeminiを率いてきたノーム・シャジールが、Google DeepMindを離れOpenAIに『アーキテクチャ研究リード』として移籍。AI競争の主戦場が『規模』から『設計図（アーキテクチャ）』そのものへ移る意味を、Transformerの次を探すサブ二次アーキテクチャの最新研究と合わせてわかりやすく解説します。">
+  <meta name="keywords" content="ノーム・シャジール,Noam Shazeer,Transformer,Attention Is All You Need,OpenAI,Google DeepMind,Gemini,アーキテクチャ研究,次世代AIアーキテクチャ,サブ二次アーキテクチャ,状態空間モデル,Mamba,線形注意,Sam Altman,生成AI,LLM,AI共創ニュース,AI共創イノベーション,AIニュース 2026年6月24日">
+  <meta property="og:title" content="Transformerの生みの親がOpenAIへ。AIの「次の設計図」を探す競争が始まった">
+  <meta property="og:description" content="2026年6月24日のAIニュースを仕事と暮らしに引き寄せて解説。Transformerの共同発明者ノーム・シャジールがGoogleからOpenAIへ移籍し『アーキテクチャ研究』を率いる。AIの賢さ競争が『規模』から『設計図』そのものへ——Transformerの次を探すサブ二次アーキテクチャの最新研究と読み解きます。">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="title.png">
+  <link rel="canonical" href="./2026-06-24.html">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Transformerの生みの親がOpenAIへ。AIの「次の設計図」を探す競争が始まった",
+    "datePublished": "2026-06-24",
+    "dateModified": "2026-06-24",
+    "inLanguage": "ja",
+    "author": {
+      "@type": "Organization",
+      "name": "AI共創ニュース"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI共創イノベーション"
+    },
+    "image": "title.png",
+    "description": "Transformerの共同発明者でGoogleのGeminiを率いてきたノーム・シャジールが、Google DeepMindを離れOpenAIに『アーキテクチャ研究リード』として移籍。AI競争の主戦場が『規模』から『設計図（アーキテクチャ）』そのものへ移る意味を、Transformerの次を探すサブ二次アーキテクチャの最新研究と合わせて解説します。"
+  }
+  </script>
+</head>
+<body>
+  <div class="space-field" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"></span>
+      <span>AI共創ニュース</span>
+    </a>
+    <nav class="site-nav" aria-label="主要リンク">
+      <a href="index.html">Home</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </header>
+
+  <main class="article-layout">
+    <a class="back-button" href="index.html">← トップへ戻る</a>
+
+    <article class="article-shell">
+      <p class="eyebrow">2026.06.24 / AI Co-Creation Briefing</p>
+      <h1>Transformerの生みの親がOpenAIへ。AIの「次の設計図」を探す競争が始まった</h1>
+      <p class="article-lead">「AIはどこまで賢くなるの？」——そう感じるとき、私たちはつい“モデルの大きさ”や“パラメータ数”に目を向けがちです。けれど今日のニュースは、その一段下にある<strong>「AIの設計図（アーキテクチャ）」</strong>そのものが、次の主戦場になりつつあることを教えてくれます。いま世界中のAIを支えている技術<strong>「Transformer（トランスフォーマー）」</strong>。その2017年の論文<strong>「Attention Is All You Need」</strong>を共同で生み出し、GoogleのGeminiを率いてきた研究者<strong>ノーム・シャジール（Noam Shazeer）</strong>が、Google DeepMindを離れ<strong>OpenAIへ移籍</strong>。新しい肩書きは<strong>「アーキテクチャ研究リード」</strong>——AIの“次のかたち”そのものを探す役目です。今日は、この移籍がなぜ単なる人事異動ではないのか、私たちの暮らしと仕事に何を意味するのかを、やさしくほどいていきます。</p>
+
+      <section>
+        <h2>何が起きたのか</h2>
+        <p>2026年6月、AI業界に大きな衝撃が走りました。GoogleのバイスプレジデントでGeminiの共同責任者を務めてきた<strong>ノーム・シャジール</strong>が、Google DeepMindを離れ、ライバルの<strong>OpenAIに移籍</strong>すると明らかにしたのです。彼に与えられた役割は<strong>「Lead for Architecture Research（アーキテクチャ研究リード）」</strong>。これは、OpenAIのすべてのモデルの土台となる<strong>ニューラルネットワークの“構造そのもの”を設計し、次世代のかたちを探る</strong>仕事です。</p>
+        <p>シャジールがなぜこれほど重要なのか。それは、彼が2017年の歴史的論文<strong>「Attention Is All You Need」</strong>の共同著者の一人だからです。この論文が生んだ<strong>Transformer</strong>という設計は、いまやChatGPTからGeminiまで、世界中のほぼすべての大規模AIの“背骨”になっています。つまり今回の移籍は、<strong>現代のAIの土台を発明した張本人が、その「次の土台」を探しにOpenAIへ向かった</strong>という出来事なのです。Googleは2024年、彼をDeepMindに呼び戻すために約27億ドル（数千億円規模）を投じたとされますが、それでも引き留めきれませんでした。OpenAIのサム・アルトマンCEOは「ノームは、OpenAIの最初期からずっと一緒に働きたかった人物の一人だ。10年かかったけれど、待った甲斐はあると思う」と歓迎のコメントを公表。<strong>“規模を大きくする競争”の先にある、“設計図そのものの競争”</strong>が本格化したことを、この一手は象徴しています。</p>
+      </section>
+
+      <section class="diagram-section" aria-labelledby="diagram-title">
+        <div class="diagram-head">
+          <p class="eyebrow">Quick Map</p>
+          <h2 id="diagram-title">今回のニュースを図解すると</h2>
+          <p>ポイントは「有名な研究者が転職した」ことではありません。<strong>AIの競争が“どれだけ大きくするか”から“どんな設計図で作るか”へと、一段深いレイヤーに移りつつある</strong>——その地殻変動を、この移籍が映し出しているのです。</p>
+        </div>
+        <div class="news-diagram" role="img" aria-label="これまでAIの競争はモデルを大きくする規模の勝負が中心だったが、Transformerの生みの親シャジールがGoogleからOpenAIへアーキテクチャ研究リードとして移籍し、競争の主戦場が設計図そのものへ移ることを示す図解">
+          <div class="diagram-node node-company">
+            <span class="node-label">これまで</span>
+            <strong>「規模を大きくする」競争が中心</strong>
+            <small>同じTransformerという土台の上で、パラメータやデータを増やして賢さを競ってきた</small>
+          </div>
+          <div class="diagram-arrow" aria-hidden="true">→</div>
+          <div class="diagram-node node-risk">
+            <span class="node-label">起きたこと</span>
+            <strong>Transformerの生みの親がOpenAIへ</strong>
+            <small>シャジールがGoogleを離れ、肩書き「アーキテクチャ研究リード」でOpenAIに合流</small>
+          </div>
+          <div class="diagram-arrow" aria-hidden="true">→</div>
+          <div class="diagram-node node-government">
+            <span class="node-label">意味</span>
+            <strong>主戦場が「設計図」そのものへ</strong>
+            <small>勝負どころが規模だけでなく、AIの“構造”をどう作り替えるかへと一段深く移る</small>
+          </div>
+          <div class="diagram-result">
+            <span class="result-line"></span>
+            <div>
+              <span class="node-label">私たちの論点</span>
+              <strong>次のAIの「土台」を誰が描くのか</strong>
+              <small>設計図が変われば、AIの速さ・賢さ・使える長さが大きく変わる。土台の競争は、私たちが使う道具の未来そのものを左右する。</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>「規模」と「設計図」は何が違うのかを見てみる</h2>
+        <p>「もっと賢いAIが欲しいなら、もっと大きくすればいい」——長らくAIはそう進歩してきました。でも、いま土台になっているTransformerには、ひとつ大きな“宿命的な弱点”があります。それは、<strong>文章が長くなるほど計算量が急激にふくらむ</strong>こと。Transformerの中心にある「注意（アテンション）」という仕組みは、すべての単語どうしを総当たりで見比べるため、<strong>入力が2倍になると計算量はおよそ4倍（＝長さの“二乗”）</strong>に跳ね上がります。長い書類や本一冊をまるごとAIに読ませると、急に重く・高くつくのはこのためです。だからこそ「規模を大きくする」だけでは、いつか壁にぶつかります。シャジールのような“設計図の専門家”が求められる理由が、ここにあります。下の図は、同じ作業量が増えたときに、従来のTransformerと、研究が進む“次世代の設計図”とで、計算の重さの増え方がどう違うかをイメージしたものです。</p>
+        <div class="news-diagram chart-diagram" role="img" aria-label="入力の長さが2倍になったとき、従来のTransformerの注意は計算量が約4倍に増えるのに対し、次世代のサブ二次アーキテクチャは約2倍の増加にとどまることを示す棒グラフの図解">
+          <div class="bar-chart">
+            <div class="bar-col">
+              <span class="bar-value">約4倍</span>
+              <span class="bar" style="height:96%"></span>
+              <span class="bar-label">従来のTransformer<br>（注意＝二乗で増加）</span>
+            </div>
+            <div class="bar-col">
+              <span class="bar-value">約2倍</span>
+              <span class="bar" style="height:48%"></span>
+              <span class="bar-label">次世代の設計図<br>（サブ二次＝ゆるやかに増加）</span>
+            </div>
+          </div>
+          <p class="chart-caption">※ 「入力の長さが2倍になったとき、計算量はどれだけ増えるか」をわかりやすく示したイメージ図です。Transformerの注意は長さの二乗で増える（2倍の入力で約4倍）一方、研究が進む「サブ二次（subquadratic）」な設計図は増え方がゆるやか（約2倍）。次の土台づくりが目指すのは、まさにこの“増え方の壁”を越えることです。</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>なぜ重要なのか</h2>
+        <p>私たちが日々使うAIの「使い勝手」は、実はこの“設計図”に深く縛られています。たとえば「長い資料をまるごと読ませたい」「会話の文脈をずっと覚えていてほしい」「もっと速く・もっと安く動いてほしい」——こうした願いはどれも、Transformerの二乗の壁にぶつかります。設計図そのものを作り替えられれば、<strong>同じ電気代・同じ待ち時間で、いまよりずっと長く・深く考えられるAI</strong>が現実になります。だからこそ各社は、規模を競うだけでなく、土台の構造を見直す研究に本腰を入れ始めました。</p>
+        <p>シャジールの移籍が象徴的なのは、<strong>「次の飛躍は、モデルを大きくすることではなく、設計図を変えることから来るかもしれない」</strong>という業界の予感を、はっきり形にした点です。Transformerを生んだ本人が「その次」を探しにいく——これは、現在の延長線上にない、新しいAIの形が真剣に模索され始めたサインです。私たちにとっては、近い将来のAIが「もっと長い文脈を、もっと安く扱える」方向へ進む可能性が高まった、という前向きな知らせでもあります。</p>
+      </section>
+
+      <section>
+        <h2>人間側に問われること</h2>
+        <p>「AIの土台がまた進化するなら、私たちはもっと置いていかれるのでは」——そう感じる方もいるかもしれません。けれど、ここで大切なのは細かな技術を追いかけることではなく、<strong>「いま自分が使っているAIには、どんな“得意・不得意”があるのか」を知っておく姿勢</strong>です。たとえば今の多くのAIが「とても長い文章になると、最初のほうを忘れたり、急に重くなったりする」ことを知っていれば、大事な資料は要点を分けて渡す、といった工夫ができます。設計図が変われば、この“クセ”も変わっていきます。<strong>道具の性質を理解して付き合う人</strong>ほど、新しいAIをいち早く味方にできるのです。</p>
+        <p>そしてもう一つ。スター研究者が巨額の条件で移籍するニュースは、つい「お金とパワーの話」に見えます。でもその裏側で起きているのは、<strong>「人類がまだ手にしていない、より良いAIの設計図を探す」という地道な研究</strong>です。誰がどんな土台を作るのかに少しだけ関心を持つこと——それは、AIを“与えられるもの”ではなく“一緒に育てていくもの”として見る、私たちの小さな主体性につながります。</p>
+      </section>
+
+      <section>
+        <h2>私たちにできること</h2>
+        <p>今日からできる小さな一歩は、難しいアーキテクチャの理論を学ぶことではありません。まずは、いま使っているAIに<strong>「長い文章をひとまとめに任せて、どこから精度が落ちるか」を一度試してみる</strong>こと。その“限界”を肌で知っておくと、次に設計図が進化して限界が伸びたとき、その恩恵をすぐに実感できます。AIの進歩は、ニュースの中の遠い出来事ではなく、あなたの手元の使い心地が少しずつ軽く・賢くなっていく形でやってきます。</p>
+        <p>AIの「次の設計図」をめぐる競争は、まだ始まったばかりです。怖がって遠ざけるのでも、すごさに圧倒されるのでもなく、<strong>土台が変わればAIの可能性が広がる</strong>という事実を、静かに楽しみに待ちたいですね。今日も、変化の速さに振り回されすぎず、けれど好奇心は手放さずに、AIと心地よく歩んでいきましょう。土台が新しくなるたび、私たちと一緒に創れることも、きっと増えていきます。</p>
+      </section>
+
+      <section class="paper-pick" aria-labelledby="paper-pick-title">
+        <p class="eyebrow">Today's Paper Pick</p>
+        <h2 id="paper-pick-title">今日のピックアップ論文</h2>
+        <p class="paper-note">今回のニュースの核心——「Transformerの“次の設計図”を探す」とは具体的にどんな研究なのか——を、正面から整理した論文をピックアップしました（arXiv・2026年6月11日公開。今日と同じ日付の論文が本稿執筆時点で確認できなかったため、ニュースの直近・同テーマの代表的研究を取り上げています）。シャジールがOpenAIで挑む「アーキテクチャ研究」が、いまどんな地図の上に立っているのかが見えてきます。</p>
+        <article class="paper-card">
+          <div class="paper-meta">
+            <span>arXiv:2606.12364 / 2026年6月11日</span>
+            <span>モデルアーキテクチャ / サブ二次 / 線形注意・状態空間モデル / 効率化</span>
+          </div>
+          <h3>On Subquadratic Architectures: From Applications to Principles</h3>
+          <p class="paper-authors">Transformerの「二乗の壁」を越える“サブ二次（subquadratic）アーキテクチャ”を、実際の使われ方から設計の原理までまとめて整理したサーベイ／原理研究（2026年6月）</p>
+          <p>この論文は、まさに今日のニュースの<strong>「次の設計図とは何か」</strong>を地図のように見せてくれる一本です。Transformerの注意が抱える<strong>「入力が長くなるほど計算が二乗で重くなる」問題</strong>に対し、研究者たちは大きく分けて<strong>線形注意（linear attention）・状態空間モデル（Mambaなど）・それらを組み合わせたハイブリッド</strong>という方向で“もっと軽い土台”を探ってきました。論文はこれらを単に並べるのではなく、<strong>「なぜ効くのか」という共通の原理</strong>へと踏み込み、さらに<strong>既存のTransformerから知識を“蒸留”して新しい設計へ移し替える</strong>現実的な道筋まで論じています。</p>
+          <div class="paper-grid">
+            <div>
+              <strong>何を調べた？</strong>
+              <p>Transformerに代わる「サブ二次」な設計図（線形注意・状態空間モデル・ハイブリッド）を、応用例から共通の設計原理まで横断的に整理した。</p>
+            </div>
+            <div>
+              <strong>何がわかった？</strong>
+              <p>個々の手法はバラバラに見えて、「文脈を有限の状態に圧縮する」など共通の原理で説明でき、既存モデルからの移行も現実味を帯びてきている。</p>
+            </div>
+            <div>
+              <strong>なぜ大事？</strong>
+              <p>「規模を増やす」競争の先にある“土台の作り替え”が、もはや理論の夢でなく工学の選択肢になりつつあることを示している。</p>
+            </div>
+          </div>
+          <p>「とにかく大きくする」から<strong>「設計の原理に立ち返って作り替える」</strong>へ——研究の重心が移りつつあることが、この一本からはっきり伝わってきます。今日のニュースと合わせて読むと、シャジールの移籍が単なる人材争奪ではなく、<strong>“Transformerの次”という巨大な研究テーマをめぐる本気の布陣</strong>であることが、くっきり見えてきます。AIの賢さは、これからも“大きさ”だけでなく“かたち”によって押し広げられていくのです。</p>
+          <a class="paper-link" href="https://arxiv.org/abs/2606.12364" target="_blank" rel="noopener">論文を読む</a>
+        </article>
+      </section>
+
+      <section id="sources" class="source-box">
+        <h2>参考にした主な情報</h2>
+        <ul>
+          <li><a href="https://www.cnbc.com/2026/06/18/google-gemini-co-lead-noam-shazeer-leaves-for-openai.html" target="_blank" rel="noopener">CNBC: Google Gemini co-lead Noam Shazeer leaves for OpenAI（2026年6月18日）</a></li>
+          <li><a href="https://techcrunch.com/2026/06/16/chatgpts-market-share-slips-below-50-for-first-time/" target="_blank" rel="noopener">TechCrunch: AI業界の勢力図に関する最新報道（2026年6月）</a></li>
+          <li><a href="https://www.buildfastwithai.com/blogs/ai-news-today-june-23-2026" target="_blank" rel="noopener">AI News Today June 23, 2026: 15 Biggest Stories</a></li>
+          <li><a href="https://arxiv.org/abs/2606.12364" target="_blank" rel="noopener">論文: On Subquadratic Architectures — From Applications to Principles（arXiv 2026年6月11日）</a></li>
+        </ul>
+      </section>
+
+      <section class="link-band article-links">
+        <div>
+          <p class="eyebrow">Follow</p>
+          <h2>AI共創イノベーション</h2>
+        </div>
+        <div class="channel-links">
+          <a class="pending-link" href="https://www.youtube.com/@AICoCreation" target="_blank" rel="noopener">AI共創イノベーション YouTube</a>
+          <a class="pending-link" href="https://note.com/mbbs" target="_blank" rel="noopener">佐藤源彦 note</a>
+        </div>
+      </section>
+
+      <a class="back-button bottom" href="index.html">← トップへ戻る</a>
+    </article>
+  </main>
+</body>
+</html>
