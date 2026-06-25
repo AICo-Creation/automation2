@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>OpenAIが自前のAIチップ「Jalapeño」を発表。AIが「速く・安く・身近に」なる土台づくりへ | AI共創ニュース</title>
+  <meta name="description" content="2026年6月25日のAIニュース。OpenAIがBroadcomと共同で、初の自社設計AIチップ『Jalapeño（ハラペーニョ）』を発表。学習用を流用せず推論に特化し、ワットあたり性能で現行最高水準を大きく上回る見込み。AIが『速く・安く・身近に』なる土台づくりの意味を、推論ハードウェアの最新研究と合わせてわかりやすく解説します。">
+  <meta name="keywords" content="OpenAI,Broadcom,Jalapeño,ハラペーニョ,AIチップ,推論チップ,Intelligence Processor,ASIC,推論アクセラレータ,LLM推論,性能/電力,データセンター,GPT-5,AIインフラ,半導体,プレフィル,デコード,生成AI,AI共創ニュース,AI共創イノベーション,AIニュース 2026年6月25日">
+  <meta property="og:title" content="OpenAIが自前のAIチップ「Jalapeño」を発表。AIが「速く・安く・身近に」なる土台づくりへ">
+  <meta property="og:description" content="2026年6月25日のAIニュースを仕事と暮らしに引き寄せて解説。OpenAIがBroadcomと初の自社設計推論チップ『Jalapeño』を発表。AIを動かすコストと電力を下げ、AIをもっと身近にする『土台』づくりを、最新研究と読み解きます。">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="title.png">
+  <link rel="canonical" href="./2026-06-26.html">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "OpenAIが自前のAIチップ「Jalapeño」を発表。AIが「速く・安く・身近に」なる土台づくりへ",
+    "datePublished": "2026-06-26",
+    "dateModified": "2026-06-26",
+    "inLanguage": "ja",
+    "author": {
+      "@type": "Organization",
+      "name": "AI共創ニュース"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI共創イノベーション"
+    },
+    "image": "title.png",
+    "description": "OpenAIがBroadcomと共同で初の自社設計AIチップ『Jalapeño』を発表。学習用を流用せず推論に特化し、ワットあたり性能で現行最高水準を大きく上回る見込み。AIを動かすコストと電力を下げ、AIを『速く・安く・身近に』する土台づくりの意味を、推論ハードウェアの最新研究と合わせて解説します。"
+  }
+  </script>
+</head>
+<body>
+  <div class="space-field" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"></span>
+      <span>AI共創ニュース</span>
+    </a>
+    <nav class="site-nav" aria-label="主要リンク">
+      <a href="index.html">Home</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </header>
+
+  <main class="article-layout">
+    <a class="back-button" href="index.html">← トップへ戻る</a>
+
+    <article class="article-shell">
+      <p class="eyebrow">2026.06.26 / AI Co-Creation Briefing</p>
+      <h1>OpenAIが自前のAIチップ「Jalapeño」を発表。AIが「速く・安く・身近に」なる土台づくりへ</h1>
+      <p class="article-lead">「AIの話題はモデルの名前ばかりで、正直ついていけない」——そう感じている方にこそ、今日のニュースは届けたい一本です。ChatGPTで知られる<strong>OpenAI</strong>が、半導体大手<strong>Broadcom（ブロードコム）</strong>と組んで、<strong>初めての自社設計AIチップ「Jalapeño（ハラペーニョ）」</strong>を発表しました。新しいAIモデルの発表ではありません。<strong>AIを“動かす土台”そのもの</strong>——電気代やスピードを決めるチップを、AIを使う会社が自分でつくりはじめた、という出来事です。地味に聞こえるかもしれません。けれどこれは、<strong>AIが「速く・安く・もっと身近に」なっていくかどうか</strong>を左右する、暮らしに直結した一歩。今日は、この“縁の下のニュース”が私たちの毎日に何を意味するのかを、やさしくほどいていきます。</p>
+
+      <section>
+        <h2>何が起きたのか</h2>
+        <p>2026年6月25日、OpenAIとBroadcomが、OpenAIにとって初となる自社設計のAIチップ<strong>「Jalapeño（ハラペーニョ）」</strong>を公表しました。OpenAIはこれを<strong>「Intelligence Processor（インテリジェンス・プロセッサ）」</strong>と呼び、両社が一緒に育てていく複数世代の計算基盤の、その第一弾だと位置づけています。</p>
+        <p>このチップの特徴は、ひとことで言えば<strong>「AIに答えさせる専用」</strong>に振り切ったことです。AIには大きく二つの仕事があります。膨大なデータから賢さを身につける<strong>「学習（トレーニング）」</strong>と、できあがったAIに実際に質問して答えを出させる<strong>「推論（インファレンス）」</strong>。私たちが毎日チャットでAIに話しかけているのは、すべて後者の「推論」です。これまでは、学習用に作られた高価なチップを推論にも流用するのが一般的でした。Jalapeñoは、その流用をやめ、<strong>最初から推論だけに最適化して設計</strong>されています。OpenAIの研究者と密に組み、AIモデルが実際にどう動くか——どんな計算やデータのやりとりが多いか——を細部まで作り込んだ専用チップです。</p>
+        <p>注目すべき点は二つ。ひとつは性能で、初期テストでは<strong>「ワットあたりの性能（同じ電力でどれだけ仕事ができるか）」が、現行の最高水準を大きく上回る見込み</strong>とされています。もうひとつは開発の速さで、設計から製造の節目まで<strong>わずか9か月</strong>という異例のスピードでした。しかもその開発を<strong>OpenAI自身のAIモデルが手伝って加速させた</strong>といいます。AIが、自分を動かすチップづくりを助けた——という入れ子の構図も話題を呼んでいます。実際の搭載は2026年内の開始を目指しています。</p>
+      </section>
+
+      <section class="diagram-section" aria-labelledby="diagram-title">
+        <div class="diagram-head">
+          <p class="eyebrow">Quick Map</p>
+          <h2 id="diagram-title">今回のニュースを図解すると</h2>
+          <p>ポイントは「OpenAIがチップを作った」ことそのものではありません。<strong>AIを動かすコストと電力を下げ、AIを“速く・安く・身近に”する土台づくりが本格化した</strong>——その流れを、この発表が象徴しているのです。</p>
+        </div>
+        <div class="news-diagram" role="img" aria-label="これまでAIの推論は学習用に作られた汎用チップを流用していて電力もコストも重かったが、OpenAIが推論専用チップJalapeñoを発表したことで、ワットあたり性能が高まり、AIが速く安く身近になる土台ができ、私たちはより気軽にAIを使えるようになることを示す図解">
+          <div class="diagram-node node-company">
+            <span class="node-label">これまで</span>
+            <strong>推論も「学習用チップ」を流用</strong>
+            <small>AIに答えさせる作業に、学習向けの高価なチップを使い回し、電力もコストも重くなりがちだった</small>
+          </div>
+          <div class="diagram-arrow" aria-hidden="true">→</div>
+          <div class="diagram-node node-risk">
+            <span class="node-label">起きたこと</span>
+            <strong>推論専用チップを9か月で発表</strong>
+            <small>OpenAIとBroadcomが推論に特化した「Jalapeño」を開発。ワットあたり性能で現行最高水準を大きく上回る見込み</small>
+          </div>
+          <div class="diagram-arrow" aria-hidden="true">→</div>
+          <div class="diagram-node node-government">
+            <span class="node-label">意味</span>
+            <strong>AIが「速く・安く」動く土台へ</strong>
+            <small>推論コストと電力が下がれば、AIはもっと多くの人に・もっと気軽に届く。AI普及の足回りが強くなる</small>
+          </div>
+          <div class="diagram-result">
+            <span class="result-line"></span>
+            <div>
+              <span class="node-label">私たちの論点</span>
+              <strong>安くなるほど「何に使うか」が問われる</strong>
+              <small>AIが安く速くなるほど、競争の鍵は「使えること」から「何のために、どう使うか」へ移る。問いを持つ人の価値が上がる。</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>「学習用を流用」と「推論専用」は何が違うのか</h2>
+        <p>少しだけ中身をのぞいてみましょう。AIに質問してから答えが返るまでには、実は性質の違う二つの工程があります。最初に質問文をまるごと読み込んで理解する<strong>「プレフィル（前さばき）」</strong>と、そこから一語ずつ答えを書き出していく<strong>「デコード（書き出し）」</strong>です。前者は<strong>計算の力</strong>がものを言い、後者は<strong>データを素早く出し入れする力（メモリの速さ）</strong>がものを言います。汎用のチップは“どちらもそこそこ”ですが、<strong>推論専用に設計すれば、この二つの工程に合わせてムダなく作り込める</strong>。だから同じ電力でも、より多くの人にAIを届けられるのです。下の図は、同じ電力で生み出せる仕事量（ワットあたりの性能）が、汎用流用と推論専用とでどう変わるかをイメージしたものです。</p>
+        <figure class="news-diagram chart-diagram" role="img" aria-label="同じ電力で生み出せる仕事量を示す棒グラフのSVG図解。学習用チップを推論に流用した従来は仕事量が小さいのに対し、推論専用に設計したJalapeñoではワットあたりの仕事量が大きく高まることを示す">
+          <svg viewBox="0 0 520 300" xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" role="presentation" aria-hidden="true" style="max-width:520px;display:block;margin:0 auto;font-family:inherit;">
+            <defs>
+              <linearGradient id="barTrad" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#8a93b5"/>
+                <stop offset="100%" stop-color="#5b637f"/>
+              </linearGradient>
+              <linearGradient id="barAI" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#7fd0ff"/>
+                <stop offset="100%" stop-color="#3a8fd6"/>
+              </linearGradient>
+            </defs>
+            <text x="260" y="28" text-anchor="middle" fill="#c3c9e0" font-size="14">同じ電力（1ワット）で生み出せる仕事量のイメージ</text>
+            <line x1="70" y1="250" x2="490" y2="250" stroke="#aab0c8" stroke-width="1.5" stroke-opacity="0.5"/>
+            <!-- 従来バー -->
+            <rect x="120" y="160" width="90" height="90" rx="8" fill="url(#barTrad)"/>
+            <text x="165" y="148" text-anchor="middle" fill="#e8ecff" font-size="19" font-weight="700">そこそこ</text>
+            <text x="165" y="272" text-anchor="middle" fill="#c3c9e0" font-size="15">学習用を流用</text>
+            <text x="165" y="290" text-anchor="middle" fill="#9aa1bd" font-size="12">（推論にもムダが残る）</text>
+            <!-- AIバー -->
+            <rect x="320" y="78" width="90" height="172" rx="8" fill="url(#barAI)"/>
+            <text x="365" y="66" text-anchor="middle" fill="#e8ecff" font-size="19" font-weight="700">大きく向上</text>
+            <text x="365" y="272" text-anchor="middle" fill="#c3c9e0" font-size="15">推論専用（Jalapeño）</text>
+            <text x="365" y="290" text-anchor="middle" fill="#9aa1bd" font-size="12">（工程に合わせて作り込む）</text>
+          </svg>
+          <figcaption class="chart-caption">※ 「ワットあたりの性能（同じ電力で生み出せる仕事量）」をわかりやすく示したイメージ図です。推論専用に設計すると、AIに答えさせる工程のムダが減り、同じ電力でより多くの人にAIを届けられます。ただし——<strong>チップが速く安くなっても、それを「何のために使うか」を決めるのは、いつも私たち人間の側です。</strong></figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>なぜ重要なのか</h2>
+        <p>このニュースが大切なのは、AI競争の主戦場が<strong>「賢いモデルを作る」から「そのモデルをいかに速く・安く動かすか」へ</strong>と広がってきたことを、はっきり示したからです。どんなに賢いAIでも、動かすのに莫大な電気代がかかれば、使えるのは一部の人や企業だけになってしまいます。逆に<strong>推論のコストと電力が下がれば、AIはもっと多くの人の手のひらに届きます</strong>。Jalapeñoが目指しているのは、まさにその「足回り」を強くすること。OpenAIが掲げる「AIを速く・信頼でき・誰もが使えるものにする」という狙いの、土台にあたる動きです。</p>
+        <p>そしてこの流れは、ChatGPTだけの話ではありません。AIを動かすコストが下がれば、<strong>小さな会社や個人でも、これまで高すぎて手が出なかったAIの使い方</strong>——たとえば大量の書類を読ませる、長い動画を要約させる、何度も試行錯誤させる——が現実的になります。電気代という見えない壁が低くなることは、<strong>AIを使える人の裾野が広がる</strong>ことそのもの。今日のニュースは、派手なモデル発表の陰で進む「みんながAIを使える未来」への、静かで確かな前進なのです。</p>
+      </section>
+
+      <section>
+        <h2>人間側に問われること</h2>
+        <p>「チップが速く安くなるなら、あとは待っていればいい」——そう感じる方もいるかもしれません。けれど見落としてはいけないのは、<strong>AIが安く使えるようになるほど、「何に使うか」を決める人間の判断が、ますます重みを増す</strong>ということです。これまでは「コストが高いから、本当に必要な用途だけ」という歯止めがありました。その壁が下がると、<strong>とりあえずAIに丸投げする</strong>ことも簡単になります。だからこそ、<strong>「これは本当にAIに任せるべき仕事か」「人が確かめるべきところはどこか」</strong>を見極める目が、これまで以上に問われます。</p>
+        <p>もう一つ大切なのは、<strong>速さや安さに目を奪われすぎない姿勢</strong>です。AIが速く大量に答えを出せても、その中身が正しいかどうかは別の問題。むしろ安く速くなるほど、誤った情報も大量に・素早く広がりかねません。今回の発表が示すのは、AIという道具の“馬力”が上がるということ。馬力が上がった道具を、どこへ向けて走らせるか——その<strong>ハンドルを握るのは、いつも人間</strong>です。性能の進歩を歓迎しつつ、その使い道に責任を持つ。この両輪が、AIと共に良い仕事をする人の条件になっていきます。</p>
+      </section>
+
+      <section>
+        <h2>私たちにできること</h2>
+        <p>今日からできる小さな一歩は、AIが「速く・安く」なる流れを、<strong>「もっと気軽に試す」チャンスとして受け取る</strong>ことです。コストや待ち時間を理由にためらっていた使い方——長い文章をまるごと要約させる、何パターンも下書きを作らせて選ぶ、思いつきをすぐ相談する——を、肩の力を抜いて試してみる。大事なのは、<strong>たくさん出させたうえで、最後は自分の目で選び取る</strong>こと。道具が速くなるほど、<strong>「どれを採るか」を決めるあなたの判断</strong>が、仕事の質を決めるようになります。</p>
+        <p>AIが速く安くなる時代は、人間が置いていかれる時代ではありません。むしろ<strong>「何のために使うかを問い、出てきたものを見極める」という人間ならではの仕事</strong>が、いっそう輝く時代です。難しい半導体の話に身構える必要はありません。覚えておきたいのはただ一つ——<strong>AIという道具は、これからもっと身近になる</strong>。その道具を心地よく使いこなす自分でいられるよう、今日も好奇心を手放さずに、AIと一緒に歩んでいきましょう。土台が強くなるほど、私たちが創れることも、きっと広がっていきます。</p>
+      </section>
+
+      <section class="paper-pick" aria-labelledby="paper-pick-title">
+        <p class="eyebrow">Today's Paper Pick</p>
+        <h2 id="paper-pick-title">今日のピックアップ論文</h2>
+        <p class="paper-note">今回のニュースの核心——「なぜ“推論専用”に作り込むと、AIは速く安く動くのか」——を、正面から測った論文をピックアップしました（arXiv・2026年6月公開。IEEE IPDPS 2026併設のワークショップHPAI4S’26採択。今日と同じ日付の論文が本稿執筆時点で確認できなかったため、ニュース直近・同テーマの代表的研究を取り上げています）。Jalapeñoが推論に振り切った理由が、研究の地図の上でくっきり見えてきます。</p>
+        <article class="paper-card">
+          <div class="paper-meta">
+            <span>arXiv:2606.17104 / 2026年6月</span>
+            <span>AIハードウェア / LLM推論 / アクセラレータ / プレフィル・デコード</span>
+          </div>
+          <h3>Prefill/Decode-Aware Evaluation of LLM Inference on Emerging AI Accelerators</h3>
+          <p class="paper-authors">LLMの推論を「プレフィル（前さばき）」と「デコード（書き出し）」の二工程に分け、新世代のAIアクセラレータ上で性能を測った評価研究（2026年6月）</p>
+          <p>この論文は、まさに今日のニュースの<strong>「推論専用に作ると何が変わるのか」</strong>を、数字で見せてくれる一本です。研究は、AIに答えさせる処理を<strong>プレフィル（質問を読み込む）とデコード（一語ずつ答える）</strong>に分け、それぞれで何が効くかを丁寧に切り分けます。すると、<strong>計算が重いプレフィルではGPUが圧倒的に速い一方、メモリ勝負のデコードでは専用アクセラレータが一語あたりの応答を大きく短縮する</strong>——工程によって“得意なハード”がまるで違うことが見えてきます。</p>
+          <div class="paper-grid">
+            <div>
+              <strong>何を調べた？</strong>
+              <p>LLM推論をプレフィルとデコードの二工程に分解し、最新のAIアクセラレータ上で処理量や応答速度がどう変わるかを実測した。</p>
+            </div>
+            <div>
+              <strong>何がわかった？</strong>
+              <p>計算重視のプレフィルではGPUが最大39倍の処理量、メモリ重視のデコードでは専用機が一語あたり約4倍速いなど、工程ごとに最適なハードが異なると示した。</p>
+            </div>
+            <div>
+              <strong>なぜ大事？</strong>
+              <p>「推論を工程に合わせて作り込めば、同じ電力でも大きく効率化できる」——Jalapeñoが推論専用に振り切った理由を、裏づける根拠になっている。</p>
+            </div>
+          </div>
+          <p>「とにかく速いチップ」ではなく<strong>「工程に合わせて作り込んだチップ」</strong>が効く——この論文は、その当たり前のようで見落とされがちな事実を、実測で突きつけます。今日のニュースと合わせて読むと、OpenAIが学習用の流用をやめて推論専用に踏み込んだ判断が、思いつきではなく<strong>研究の裏づけを持った“理にかなった一手”</strong>であることが、くっきり見えてきます。AIの進歩は、賢いモデルと、それを支える地道な土台づくりの、両方から生まれていくのです。</p>
+          <a class="paper-link" href="https://arxiv.org/abs/2606.17104" target="_blank" rel="noopener">論文を読む</a>
+        </article>
+      </section>
+
+      <section aria-labelledby="related-note-title">
+        <p class="eyebrow">Related Read</p>
+        <h2 id="related-note-title">あわせて読みたい note</h2>
+        <p>今日のニュースが教えてくれた「AIが速く・たくさん動く時代を、どう味方につけるか」を、もう一歩実践に落とし込みたい方へ。AI共創イノベーションの<strong>佐藤源彦</strong>さんが、AIイラストとAIライティングを<strong>同時タスクで連続生成</strong>する「ナノバナナライティング」を、やさしく解説しています。今日の記事の<strong>「速く・たくさん出させて、自分で選び取る」</strong>という視点と、そのまま地続きの内容です。</p>
+        <div class="top-paper">
+          <span>佐藤源彦@MBBS / note</span>
+          <strong>脅威のナノバナナライティング！AIイラストとAIライティングを同時タスクで連続生成！</strong>
+          <p>一つの指示で画像と文章を同時に、続けざまに生み出す“高スループット”なAI活用術。AIの馬力が上がる時代に「量から良いものを選ぶ」コツを、日々の制作ですぐ試せる形にした実践ガイドです。</p>
+          <a class="paper-link" href="https://note.com/mbbs/n/nd7814db51867" target="_blank" rel="noopener">noteを読む →</a>
+        </div>
+      </section>
+
+      <section id="sources" class="source-box">
+        <h2>参考にした主な情報</h2>
+        <ul>
+          <li><a href="https://openai.com/index/openai-broadcom-jalapeno-inference-chip/" target="_blank" rel="noopener">OpenAI: OpenAI and Broadcom unveil LLM-optimized inference chip（2026年6月）</a></li>
+          <li><a href="https://www.cnbc.com/2026/06/24/openai-and-broadcom-reveal-jalapeno-first-ai-chip-in-partnership.html" target="_blank" rel="noopener">CNBC: OpenAI unveils first chip as part of Broadcom deal in effort to 'build the full stack'（2026年6月24日）</a></li>
+          <li><a href="https://www.tomshardware.com/tech-industry/artificial-intelligence/broadcom-and-openai-unveil-custom-built-jalapeno-inference-processor-openais-first-chip-is-a-massive-reticle-sized-asic-built-in-an-ultra-fast-nine-month-development-cycle" target="_blank" rel="noopener">Tom's Hardware: Broadcom and OpenAI unveil custom-built Jalapeño inference processor（2026年6月）</a></li>
+          <li><a href="https://arxiv.org/abs/2606.17104" target="_blank" rel="noopener">論文: Prefill/Decode-Aware Evaluation of LLM Inference on Emerging AI Accelerators（arXiv 2026年6月）</a></li>
+        </ul>
+      </section>
+
+      <section class="link-band article-links">
+        <div>
+          <p class="eyebrow">Follow</p>
+          <h2>AI共創イノベーション</h2>
+        </div>
+        <div class="channel-links">
+          <a class="pending-link" href="https://www.youtube.com/@AICoCreation" target="_blank" rel="noopener">AI共創イノベーション YouTube</a>
+          <a class="pending-link" href="https://note.com/mbbs" target="_blank" rel="noopener">佐藤源彦 note</a>
+        </div>
+      </section>
+
+      <a class="back-button bottom" href="index.html">← トップへ戻る</a>
+    </article>
+  </main>
+</body>
+</html>
