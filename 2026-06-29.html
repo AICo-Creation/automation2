@@ -1,0 +1,240 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>クアルコムがAIソフト企業Modularを約39億ドルで買収。AIが“どのチップでも動く”時代へ——NVIDIAの「CUDAの壁」に風穴 | AI共創ニュース</title>
+  <meta name="description" content="2026年6月のAIニュース。半導体大手クアルコムが、AIソフトの新興企業Modularを約39億ドル（およそ6,000億円）で買収。Mojo言語とMAXエンジンで『一度書けば、どのチップでも動く』土台を獲得し、NVIDIAの“CUDAの壁”に風穴を開けます。AIがハードの囲い込みから解放されはじめた潮目を、GPUの移植性を論じる最新研究と合わせてわかりやすく解説します。">
+  <meta name="keywords" content="Modular,Mojo,MAX,クアルコム,Qualcomm,NVIDIA,CUDA,ベンダーロックイン,AIチップ,AI半導体,ハードウェア非依存,推論エンジン,MLIR,移植性,GPU,生成AI,AIインフラ,新AI技術,AI共創ニュース,AI共創イノベーション,AIニュース 2026年6月29日">
+  <meta property="og:title" content="クアルコムがAIソフト企業Modularを約39億ドルで買収。AIが“どのチップでも動く”時代へ——NVIDIAの「CUDAの壁」に風穴">
+  <meta property="og:description" content="2026年6月のAIニュースを仕事と暮らしに引き寄せて解説。クアルコムがAIソフトの新興企業Modularを約39億ドルで買収。Mojo言語とMAXエンジンで『一度書けば、どのチップでも動く』土台を獲得し、NVIDIAの“CUDAの壁”に風穴。AIがハードの囲い込みから解放される意味を、最新研究と読み解きます。">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="title.png">
+  <link rel="canonical" href="./2026-06-29.html">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "クアルコムがAIソフト企業Modularを約39億ドルで買収。AIが“どのチップでも動く”時代へ——NVIDIAの「CUDAの壁」に風穴",
+    "datePublished": "2026-06-29",
+    "dateModified": "2026-06-29",
+    "inLanguage": "ja",
+    "author": {
+      "@type": "Organization",
+      "name": "AI共創ニュース"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI共創イノベーション"
+    },
+    "image": "title.png",
+    "description": "半導体大手クアルコムが、AIソフトの新興企業Modularを約39億ドルで買収。Mojo言語とMAXエンジンで『一度書けば、どのチップでも動く』土台を獲得し、NVIDIAの“CUDAの壁”に風穴を開ける。AIがハードの囲い込みから解放されはじめた潮目を、GPUの移植性を論じる最新研究と合わせて解説します。"
+  }
+  </script>
+</head>
+<body>
+  <div class="space-field" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"></span>
+      <span>AI共創ニュース</span>
+    </a>
+    <nav class="site-nav" aria-label="主要リンク">
+      <a href="index.html">Home</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </header>
+
+  <main class="article-layout">
+    <a class="back-button" href="index.html">← トップへ戻る</a>
+
+    <article class="article-shell">
+      <p class="eyebrow">2026.06.29 / AI Co-Creation Briefing</p>
+      <h1>クアルコムがAIソフト企業Modularを約39億ドルで買収。AIが“どのチップでも動く”時代へ——NVIDIAの「CUDAの壁」に風穴</h1>
+      <p class="article-lead">「AIといえばNVIDIA」——ここ数年、私たちはなんとなくそう思ってきました。実際、世界中の生成AIのほとんどが、NVIDIAのチップと、その上で動く<strong>「CUD（クーダ）」</strong>という独自ソフトの上で走っています。でも今、その“当たり前”に小さな、しかし大きな風穴が開きはじめました。スマホ向け半導体で知られる<strong>クアルコム</strong>が、AIソフトの新興企業<strong>「Modular（モジュラー）」</strong>を<strong>約39億ドル（およそ6,000億円）</strong>で買収。Modularが持つのは、<strong>「一度書けば、どのメーカーのチップでも動く」</strong>AIの土台です。今日のニュースの本質は、また一つ大型買収があった、という話ではありません。<strong>AIが、特定メーカーのチップに縛られた“借りもの”から、どこでも動かせる“選べる道具”へ</strong>——その潮目を、やさしくほどいていきます。</p>
+
+      <section>
+        <h2>何が起きたのか</h2>
+        <p>2026年6月、半導体大手<strong>クアルコム</strong>が、AIソフトの新興企業<strong>Modular</strong>を<strong>約39億ドル（およそ6,000億円）の全額株式</strong>で買収すると発表しました。Modularは、伝説的なソフト技術者クリス・ラトナーらが立ち上げた会社で、社員はおよそ150人。手がけているのは派手なAIモデルではなく、その<strong>“足回り”</strong>——プログラミング言語<strong>「Mojo（モジョ）」</strong>と、AIを動かす推論エンジン<strong>「MAX」</strong>です。</p>
+        <p>この足回りが、なぜそんなに高く評価されたのか。理由は一つ。MAXを使うと、<strong>同じAIのコードを、NVIDIAだけでなくAMD・インテル・クアルコムなど、別々のメーカーのチップの上で、書き直さずに動かせる</strong>からです。これまでAIは、NVIDIAの<strong>CUDA</strong>という独自ソフトに合わせて作り込むのが事実上の前提でした。Modularの技術は、その<strong>「NVIDIA以外では動かしづらい」という見えない壁（ベンダーロックイン）</strong>を、ソフトの力で溶かしにいく挑戦です。</p>
+        <p>そして見逃せないのが、この買収の<strong>狙い</strong>です。クアルコムは同じ時期に、データセンター向けAIチップ「Dragonfly」の計画や、大手との供給契約も明らかにしました。つまり今回の買収は、<strong>「自社のチップでも最先端AIをすんなり動かせる」入り口を手に入れる</strong>一手。AIの主戦場が、チップの性能比べだけでなく、<strong>「どのチップでも動かせるソフトをどちらが握るか」</strong>へ広がりはじめたことを、はっきり映し出しています。</p>
+      </section>
+
+      <section class="diagram-section" aria-labelledby="diagram-title">
+        <div class="diagram-head">
+          <p class="eyebrow">Quick Map</p>
+          <h2 id="diagram-title">今回のニュースを図解すると</h2>
+          <p>ポイントは「大型買収がまた一つ」ではありません。<strong>AIが“NVIDIA専用の借りもの”から、“どのチップでも動かせる選べる道具”へ</strong>——その重心の移動を、この買収が象徴しています。</p>
+        </div>
+        <div class="news-diagram" role="img" aria-label="これまでAIは事実上NVIDIA専用で、CUDAという独自ソフトに最適化され他社チップに移しづらかったが、クアルコムがModularを買収し、Mojo言語とMAXエンジンで一度書けばどのチップでも動く土台を獲得。これによりAIがハードの囲い込みから解放され、私たちはどのAI基盤に乗るかを自分で選べる時代の自由と乗り換えやすさをどう両立するかを問われるという流れを示す図解">
+          <div class="diagram-node node-company">
+            <span class="node-label">これまで</span>
+            <strong>AIは事実上“NVIDIA専用”</strong>
+            <small>多くのAIがCUDAという独自ソフトに合わせて作り込まれ、他社のチップへは移しづらい。便利だが提供元に縛られる（ベンダーロックイン）</small>
+          </div>
+          <div class="diagram-arrow" aria-hidden="true">→</div>
+          <div class="diagram-node node-risk">
+            <span class="node-label">起きたこと</span>
+            <strong>“どこでも動く土台”を買収</strong>
+            <small>クアルコムがModularを約39億ドルで買収。Mojo言語とMAXエンジンで、同じコードをNVIDIA以外のチップでも書き直さず動かせる</small>
+          </div>
+          <div class="diagram-arrow" aria-hidden="true">→</div>
+          <div class="diagram-node node-government">
+            <span class="node-label">意味</span>
+            <strong>AIがハードの“囲い込み”から自由に</strong>
+            <small>チップを選べる＝競争が生まれ、価格も下がりやすい。AIが特定メーカーの独占から、開かれた選択肢へ移りはじめた</small>
+          </div>
+          <div class="diagram-result">
+            <span class="result-line"></span>
+            <div>
+              <span class="node-label">私たちの論点</span>
+              <strong>「どのAI基盤に乗るか」を自分で選べる時代をどう生かすか</strong>
+              <small>一社に縛られない自由は、同時に「選び・乗り換える」判断を私たちに返します。便利さと“身軽さ”をどう両立するかが問われます。</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>なぜ「どのチップでも動く」が難しいのか——CUDAという見えない壁</h2>
+        <p>「コードなんて、どのチップでも動いて当然では？」と思うかもしれません。でも、実はここに長年の壁があります。AIは最終的に、チップが分かる“機械語”に翻訳されて動きますが、その<strong>言葉づかい（命令セット）がメーカーごとに違う</strong>のです。NVIDIA向けに丁寧に書いたコードは、AMDやインテルのチップではそのまま動かず、書き直しが要る。だからAIの作り手は、いちばん普及したNVIDIAの<strong>CUDA</strong>に合わせて作る——こうして<strong>「NVIDIAに集まるほど、ますます離れにくくなる」</strong>循環ができあがりました。これが、性能だけでは崩せないNVIDIAの“堀（ほり）”の正体です。</p>
+        <p>Modularの発想は、ここに<strong>“共通の翻訳層”</strong>を一枚かませること。下の図のように、これまでは「NVIDIA向けに書く→NVIDIAでしか動かない」一本道でした。Mojo／MAXは、いったん<strong>メーカーに依存しない形で書いてから、それぞれのチップ用へ自動で訳し分ける</strong>。だから作り手は一度書くだけで、動かす先を後から選べる。会社にたとえれば、<strong>特定の取引先専用の伝票しか作れなかったのを、どの取引先にも出せる共通フォーマットに変える</strong>ようなものです。縛りをほどき、選択肢を取り戻す——それが今回の技術の核心です。</p>
+        <figure class="news-diagram chart-diagram" role="img" aria-label="従来とModular方式を比べるSVG図解。従来はAIコードをCUDA向けに書くとNVIDIAのチップでしか動かず一本道だが、ModularのMojoとMAXを使うとメーカー非依存の形で一度書くだけでNVIDIA・AMD・インテル・クアルコムの各チップへ訳し分けて動かせることを示す">
+          <svg viewBox="0 0 600 360" xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" role="presentation" aria-hidden="true" style="max-width:600px;display:block;margin:0 auto;font-family:inherit;">
+            <defs>
+              <linearGradient id="boxCode" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#b8a6ff"/>
+                <stop offset="100%" stop-color="#6a4fd0"/>
+              </linearGradient>
+              <linearGradient id="boxBridge" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#8fe6b0"/>
+                <stop offset="100%" stop-color="#3aa86d"/>
+              </linearGradient>
+            </defs>
+            <text x="300" y="26" text-anchor="middle" fill="#c3c9e0" font-size="14">同じAIを、どのチップで動かせる？</text>
+
+            <!-- 従来 -->
+            <text x="150" y="62" text-anchor="middle" fill="#9aa1bd" font-size="13">従来：CUDAに縛られる</text>
+            <rect x="80" y="78" width="140" height="40" rx="8" fill="url(#boxCode)"/>
+            <text x="150" y="103" text-anchor="middle" fill="#e8ecff" font-size="13" font-weight="700">AIコード（CUDA）</text>
+            <line x1="150" y1="118" x2="150" y2="158" stroke="#aab0c8" stroke-width="2" stroke-opacity="0.6"/>
+            <rect x="95" y="158" width="110" height="38" rx="8" fill="#2a2f45" stroke="#6a4fd0" stroke-width="1.5"/>
+            <text x="150" y="182" text-anchor="middle" fill="#e8ecff" font-size="13">NVIDIA のみ</text>
+            <text x="150" y="232" text-anchor="middle" fill="#8a91ad" font-size="12">AMD・インテル等は</text>
+            <text x="150" y="250" text-anchor="middle" fill="#8a91ad" font-size="12">書き直しが必要 ✕</text>
+
+            <!-- Modular -->
+            <text x="450" y="62" text-anchor="middle" fill="#9aa1bd" font-size="13">Modular：一度書けばどこでも</text>
+            <rect x="380" y="78" width="140" height="40" rx="8" fill="url(#boxCode)"/>
+            <text x="450" y="103" text-anchor="middle" fill="#e8ecff" font-size="13" font-weight="700">AIコード（Mojo）</text>
+            <line x1="450" y1="118" x2="450" y2="138" stroke="#aab0c8" stroke-width="2" stroke-opacity="0.6"/>
+            <rect x="375" y="138" width="150" height="34" rx="8" fill="url(#boxBridge)"/>
+            <text x="450" y="160" text-anchor="middle" fill="#0c1322" font-size="12" font-weight="700">MAX（共通の翻訳層）</text>
+            <!-- fan out -->
+            <line x1="450" y1="172" x2="378" y2="206" stroke="#3aa86d" stroke-width="1.8" stroke-opacity="0.7"/>
+            <line x1="450" y1="172" x2="450" y2="206" stroke="#3aa86d" stroke-width="1.8" stroke-opacity="0.7"/>
+            <line x1="450" y1="172" x2="522" y2="206" stroke="#3aa86d" stroke-width="1.8" stroke-opacity="0.7"/>
+            <line x1="450" y1="172" x2="306" y2="206" stroke="#3aa86d" stroke-width="1.8" stroke-opacity="0.7"/>
+            <rect x="286" y="206" width="62" height="34" rx="7" fill="#2a2f45" stroke="#3aa86d" stroke-width="1.3"/>
+            <text x="317" y="228" text-anchor="middle" fill="#e8ecff" font-size="11">NVIDIA</text>
+            <rect x="358" y="206" width="58" height="34" rx="7" fill="#2a2f45" stroke="#3aa86d" stroke-width="1.3"/>
+            <text x="387" y="228" text-anchor="middle" fill="#e8ecff" font-size="11">AMD</text>
+            <rect x="426" y="206" width="58" height="34" rx="7" fill="#2a2f45" stroke="#3aa86d" stroke-width="1.3"/>
+            <text x="455" y="228" text-anchor="middle" fill="#e8ecff" font-size="11">インテル</text>
+            <rect x="494" y="206" width="74" height="34" rx="7" fill="#2a2f45" stroke="#3aa86d" stroke-width="1.3"/>
+            <text x="531" y="228" text-anchor="middle" fill="#e8ecff" font-size="11">クアルコム</text>
+            <text x="450" y="266" text-anchor="middle" fill="#8fe6b0" font-size="12">どのチップでも動く ◯</text>
+          </svg>
+          <figcaption class="chart-caption">※ CUDAロックインとModular方式の違いをわかりやすく示したイメージ図です。従来は<strong>NVIDIA向けに書くと一本道</strong>。Mojo／MAXは<strong>メーカーに依存しない形で一度書き、各チップへ訳し分ける</strong>。だからAIを「動かす先」を後から自由に選べる——これが買収で得た“足回り”の価値です。</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>なぜ重要なのか</h2>
+        <p>このニュースが大切なのは、AIの世界の力関係が<strong>「いちばん速いチップを誰が作るか」から「どのチップでもAIを動かせる“通り道”を誰が握るか」へ</strong>と動きはじめたことを、はっきり示したからです。AIが特定メーカーのチップに縛られている間は、私たちは料金も供給も<strong>そのメーカーの都合</strong>に左右されます。世界的なAIチップ不足のなかで、「欲しくても手に入らない」「値段が言い値」という不自由を、多くの企業が味わってきました。でも“どこでも動く”土台が広がれば、<strong>手に入るチップで、いちばん割安な選択肢を選べる</strong>。これは単なる技術の話ではなく、<strong>AIという道具を、特定の一社に握られすぎない</strong>という安心の話なのです。</p>
+        <p>しかもこの流れは、もう例外ではありません。2026年に入り、クアルコムだけでなく各社が、独自ソフトの壁を越える<strong>「共通の翻訳層」</strong>づくりに本腰を入れはじめました。チップの選択肢が増えれば、競争が生まれ、<strong>AIを動かすコストと電力</strong>はさらに下がっていきます。最先端AIが、電気や水道のように<strong>“どの蛇口からでも引ける”土台（インフラ）</strong>へ近づいている——今日のニュースは、その静かで大きな地殻変動を、私たちに知らせています。</p>
+      </section>
+
+      <section>
+        <h2>人間側に問われること</h2>
+        <p>「AIがどのチップでも動くなら、もう何も気にしなくていい」とまでは言えません。なぜなら、選択肢が増えるほど、<strong>“選ぶ責任”も私たちの側に返ってくる</strong>からです。一社にすべてお任せしていれば、迷う必要はありませんでした。けれど「どの基盤に乗るか」を選べる時代は、裏を返せば<strong>「乗り換えやすさ（身軽さ）を、最初から設計しておく」</strong>賢さが問われる時代でもあります。便利さに飛びつく前に、「この仕組みは、後から別のチップやサービスへ移せるか」を一度立ち止まって確かめる——その視点が、開かれた時代ほど効いてきます。</p>
+        <p>もう一つ大切なのは、<strong>“流行りの一社”だけに頼りきらない目</strong>です。強い企業の製品はたしかに便利ですが、それ一本に組織やくらしを預けきると、価格や方針の変更にまるごと振り回されます。とはいえ、過度に身構える必要はありません。大事なのは、<strong>「最強かどうか」だけでなく「いざというとき乗り換えられるか」も合わせて選ぶ</strong>こと。開かれた選択肢が増えるほど、最後に頼りになるのは、私たち自身の<strong>選ぶ力</strong>なのです。</p>
+      </section>
+
+      <section>
+        <h2>私たちにできること</h2>
+        <p>今日からできる小さな一歩は、AIを<strong>「どこか一社のサービス」ではなく「選んで・組み替えられる道具」として見はじめる</strong>ことです。難しい技術を学ぶ必要はありません。たとえば仕事で使うAIツールを一つ選ぶときに、「これしか使えなくなったら困らないか」「似た機能の別の選択肢はあるか」を、頭の片隅で考えてみる。それだけで、特定の流行に流されず、<strong>「自分（や組織）にとって本当に合うAIはどれか」を主体的に選ぶ側</strong>に立てます。</p>
+        <p>AIが“どのチップでも動く”時代は、私たちが技術の囲い込みに振り回される時代ではありません。むしろ<strong>「開かれた選択肢のなかから、自分の目的に合うものを、自分で選び・組み替えられる」</strong>、成熟したつき合い方の始まりです。覚えておきたいのはただ一つ——<strong>AIはもう、一社に縛られた“借りもの”ではなく、あなたが選べる道具になりはじめている</strong>。その変化を歓迎しながら、好奇心と落ち着きの両方を手に、今日もAIと一緒に歩んでいきましょう。</p>
+      </section>
+
+      <section class="paper-pick" aria-labelledby="paper-pick-title">
+        <p class="eyebrow">Today's Paper Pick</p>
+        <h2 id="paper-pick-title">今日のピックアップ論文</h2>
+        <p class="paper-note">今回のニュースの核心——「なぜAIはメーカーごとのチップに縛られるのか」「その壁は、本当に越えられるのか」——を、正面から論じた論文をピックアップしました（arXiv・2026年3月公開。今日と同じ日付の論文が本稿執筆時点で確認できなかったため、ニュースのテーマにもっとも近い最新の研究を取り上げています）。Modularが挑む“どこでも動く”の土台が、研究の地図の上でくっきり見えてきます。</p>
+        <article class="paper-card">
+          <div class="paper-meta">
+            <span>arXiv:2603.28793 / 2026年3月</span>
+            <span>GPU / 命令セット / 移植性 / ベンダーロックイン / ハードウェア非依存</span>
+          </div>
+          <h3>Toward a Universal GPU Instruction Set Architecture: A Cross-Vendor Analysis of Hardware-Invariant Computational Primitives in Parallel Processors</h3>
+          <p class="paper-authors">「どのチップにも共通する土台」を探す——主要4メーカー・16種類のGPUを横断比較し、メーカーが違っても変わらない“計算のいろは”を洗い出した研究（2026年3月）</p>
+          <p>この論文は、まさに今日のニュースの<strong>「CUDAに書いたコードは、AMDやインテルのGPUではそのまま動かない」</strong>という壁が、なぜ生まれ、どうすれば越えられるのかを、根っこから見せてくれる一本です。研究は、主要4メーカー・16種類のGPUを初めて横断的に調べ、<strong>メーカーが違っても物理的に共通する“計算の基本要素（10個の不変な部品）”</strong>——足並みをそろえて動く処理や、階層的なメモリの使い方など——を特定しました。つまり、見た目はバラバラでも<strong>深いところには共通の地面がある</strong>ことを示したのです。</p>
+          <div class="paper-grid">
+            <div>
+              <strong>何を調べた？</strong>
+              <p>NVIDIA・AMD・インテル・アップルなど主要メーカーのGPU16種類を横断比較し、設計が違ってもなお共通している計算の基本要素を体系的に洗い出した。</p>
+            </div>
+            <div>
+              <strong>何がわかった？</strong>
+              <p>メーカーごとに言葉づかい（命令セット）は違っても、物理の制約から生まれる“共通の10個の部品”が存在する。共通の土台の上なら移植は原理的に可能だと示した。</p>
+            </div>
+            <div>
+              <strong>なぜ大事？</strong>
+              <p>「一度書けば、どのチップでも動く」というModularの挑戦が、思いつきではなく理にかなっていることを裏づける。AIをメーカーの囲い込みから解く理論的な足場になる。</p>
+            </div>
+          </div>
+          <p>「ベンダーロックインは、もう変えられない宿命だ」——そんな思い込みを、この研究はやさしく崩します。<strong>表面のバラつき（メーカーごとの違い）と、深いところの共通点（物理が決める計算の基本）を切り分ける</strong>。そう発想を変えたからこそ、“どこでも動く”AIが、夢物語ではなく現実の設計目標になりました。今日のニュースと合わせて読むと、クアルコムのModular買収が一企業の思惑にとどまらず、<strong>研究が描いてきた「共通の土台を取り戻す」流れ</strong>の上にあることが、くっきり見えてきます。AIの進歩は、より速いチップの競争だけでなく、<strong>同じAIを、より多くのチップへ、より自由に届ける工夫</strong>からも生まれていくのです。</p>
+          <a class="paper-link" href="https://arxiv.org/abs/2603.28793" target="_blank" rel="noopener">論文を読む</a>
+        </article>
+      </section>
+
+      <section aria-labelledby="related-note-title">
+        <p class="eyebrow">Related Read</p>
+        <h2 id="related-note-title">あわせて読みたい note</h2>
+        <p>今日のテーマ「<strong>一社に縛られず、自分でAIの土台を選ぶ</strong>」を、もう一歩深く味わいたい方へ。AI共創イノベーションの<strong>佐藤源彦</strong>さんが、AI時代に流されず<strong>「自分のグランドデザイン（全体構想）を描く」</strong>ための実践法を、3つの「O」という枠組みでわかりやすく解説しています。<strong>「与えられた選択肢に乗るのではなく、自分の目的から逆算してAIを選び・組み立てる」</strong>——今日のニュースと、そのまま地続きで読める一本です。</p>
+        <div class="top-paper">
+          <span>佐藤源彦@MBBS / note</span>
+          <strong>AIでグランドデザインを描く『構想プロンプト』の使い方：3つの「O（オー）」で実現するAI時代の共創戦略</strong>
+          <p>流行りのツールに振り回されるのではなく、自分の目的から全体像を描き、AIを“選び・組み立てる”ための実践法。開かれた選択肢の時代に、主体的にAIと付き合うためのコンパスになる一本です。</p>
+          <a class="paper-link" href="https://note.com/mbbs/n/n20e1c9850fac" target="_blank" rel="noopener">noteを読む →</a>
+        </div>
+      </section>
+
+      <section id="sources" class="source-box">
+        <h2>参考にした主な情報</h2>
+        <ul>
+          <li><a href="https://finance.yahoo.com/technology/ai/articles/qualcomm-acquires-ai-software-startup-131042959.html" target="_blank" rel="noopener">Yahoo Finance: Qualcomm acquires AI software startup Modular for $3.9 billion（2026年6月）</a></li>
+          <li><a href="https://www.cnbc.com/2026/06/24/qualcomm-ai-chip-modular-software.html" target="_blank" rel="noopener">CNBC: Qualcomm inks deal for AI startup Modular to bolster software stack（2026年6月24日）</a></li>
+          <li><a href="https://www.networkworld.com/article/4189098/qualcomms-3-9-billion-purchase-of-modular-aims-to-change-the-data-center-dynamic.html" target="_blank" rel="noopener">Network World: Qualcomm's $3.9 billion purchase of Modular aims to change the data center dynamic（2026年6月）</a></li>
+          <li><a href="https://easternherald.com/2026/06/26/qualcomm-acquires-modular-nvidia-cuda-ai-chips/" target="_blank" rel="noopener">Eastern Herald: Qualcomm Acquires Modular to Challenge Nvidia's CUDA Software Lock-In（2026年6月26日）</a></li>
+          <li><a href="https://arxiv.org/abs/2603.28793" target="_blank" rel="noopener">論文: Toward a Universal GPU Instruction Set Architecture（arXiv 2026年3月）</a></li>
+        </ul>
+      </section>
+
+      <section class="link-band article-links">
+        <div>
+          <p class="eyebrow">Follow</p>
+          <h2>AI共創イノベーション</h2>
+        </div>
+        <div class="channel-links">
+          <a class="pending-link" href="https://www.youtube.com/@AICoCreation" target="_blank" rel="noopener">AI共創イノベーション YouTube</a>
+          <a class="pending-link" href="https://note.com/mbbs" target="_blank" rel="noopener">佐藤源彦 note</a>
+        </div>
+      </section>
+
+      <a class="back-button bottom" href="index.html">← トップへ戻る</a>
+    </article>
+  </main>
+</body>
+</html>
