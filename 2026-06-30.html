@@ -1,0 +1,276 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>AnthropicがアリババのAI「蒸留」を告発。Claudeの“頭脳”が2,880万回の会話で抜き取られた——作るのは巨額、真似るのはわずか | AI共創ニュース</title>
+  <meta name="description" content="2026年6月のAIニュース。AnthropicがアリババのQwen関連の事業者を、史上最大規模の『蒸留（ディスティレーション）』攻撃として告発。約2万5千のなりすましアカウントから2,880万回もClaudeに質問を浴びせ、その“頭脳”を写し取ろうとした疑い。安全装置だけが受け継がれないという危うさを、AIの蒸留耐性を論じる最新研究と合わせてわかりやすく解説します。">
+  <meta name="keywords" content="蒸留,ディスティレーション,distillation,モデル抽出,Anthropic,Claude,アリババ,Alibaba,Qwen,知識蒸留,AI模倣,ガードレール,AI安全,知的財産,LLM,生成AI,AIセキュリティ,新AI技術,AI共創ニュース,AI共創イノベーション,AIニュース 2026年6月30日">
+  <meta property="og:title" content="AnthropicがアリババのAI「蒸留」を告発。Claudeの“頭脳”が2,880万回の会話で抜き取られた——作るのは巨額、真似るのはわずか">
+  <meta property="og:description" content="2026年6月のAIニュースを仕事と暮らしに引き寄せて解説。AnthropicがアリババのQwen関連事業者を史上最大規模の『蒸留』攻撃として告発。約2万5千のなりすましアカウントから2,880万回もClaudeに質問し、その能力を写し取ろうとした疑い。安全装置だけが受け継がれない危うさを最新研究と読み解きます。">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="title.png">
+  <link rel="canonical" href="./2026-06-30.html">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "AnthropicがアリババのAI「蒸留」を告発。Claudeの“頭脳”が2,880万回の会話で抜き取られた——作るのは巨額、真似るのはわずか",
+    "datePublished": "2026-06-30",
+    "dateModified": "2026-06-30",
+    "inLanguage": "ja",
+    "author": {
+      "@type": "Organization",
+      "name": "AI共創ニュース"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI共創イノベーション"
+    },
+    "image": "title.png",
+    "description": "AnthropicがアリババのQwen関連事業者を、史上最大規模の『蒸留』攻撃として告発。約2万5千のなりすましアカウントから2,880万回Claudeに質問し、その能力を写し取ろうとした疑い。能力は写せても安全装置は受け継がれないという危うさを、AIの蒸留耐性を論じる最新研究と合わせて解説します。"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "AIの「蒸留（ディスティレーション）」とは何ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "大きな『先生AI』にたくさん質問し、その答えを教材にして小さな『生徒AI』を育てる学習法です。本来は効率化の正攻法ですが、他社のAIに無断で大量の質問を浴びせ、その能力だけを写し取る使い方は『蒸留攻撃』と呼ばれ、知的財産の盗用が疑われます。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "なぜ蒸留が危険だと言われるのですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "蒸留で写し取れるのは『能力』だけで、元のAIに組み込まれた安全装置（ガードレール）や利用ルールは受け継がれないからです。賢さだけを取り出し、ブレーキの外れたAIが安価に量産されるおそれがあります。"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="space-field" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"></span>
+      <span>AI共創ニュース</span>
+    </a>
+    <nav class="site-nav" aria-label="主要リンク">
+      <a href="index.html">Home</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </header>
+
+  <main class="article-layout">
+    <a class="back-button" href="index.html">← トップへ戻る</a>
+
+    <article class="article-shell">
+      <p class="eyebrow">2026.06.30 / AI Co-Creation Briefing</p>
+      <h1>AnthropicがアリババのAI「蒸留」を告発。Claudeの“頭脳”が2,880万回の会話で抜き取られた——作るのは巨額、真似るのはわずか</h1>
+      <p class="article-lead">最先端AIをゼロから育てるには、数千億円規模のお金と、世界中の頭脳と、膨大な電力がかかります。ところが今、その“結晶”だけを、ずっと安く・速く写し取る手口が問題になっています。キーワードは<strong>「蒸留（ディスティレーション）」</strong>。Claudeを開発する<strong>Anthropic</strong>が、中国アリババの<strong>Qwen</strong>に関係する事業者を、<strong>史上最大規模の蒸留攻撃</strong>として米議会に告発しました。約<strong>2万5千のなりすましアカウント</strong>から、わずか1か月半で<strong>2,880万回</strong>もClaudeに質問を浴びせ、その<strong>“頭脳”だけを写し取ろうとした</strong>疑いです。今日のニュースの本質は、米中の小競り合いという話にとどまりません。<strong>「能力は写せても、安全装置は受け継がれない」</strong>——AIをコピーすることの、見落とされがちな危うさを、やさしくほどいていきます。</p>
+
+      <section>
+        <h2>何が起きたのか</h2>
+        <p>2026年6月、<strong>Anthropic</strong>が米上院銀行委員会に宛てた書簡で、中国アリババの<strong>Qwen</strong>（クウェン）AIラボに関係する事業者を告発したことが明らかになりました。内容は深刻です。<strong>2026年4月22日から6月5日</strong>のあいだに、約<strong>2万5千のなりすましアカウント</strong>を使って、<strong>2,880万回</strong>もの会話をClaudeと交わし、その答えを大量に集めていた——というものです。Anthropicはこれを、自社が把握したなかで<strong>過去最大の能力抜き取り（抽出）</strong>だとしています。</p>
+        <p>狙われたのは、Claudeが得意とする<strong>ソフトウェア開発の力</strong>と、手順を考えて自分で作業を進める<strong>「エージェント的な推論」</strong>でした。やり口が<strong>「蒸留」</strong>です。本来の蒸留は、大きな<strong>「先生AI」</strong>の答えを教材にして、小さな<strong>「生徒AI」</strong>を効率よく育てる正攻法の技術。けれど他社のAIに無断で大量の質問を浴びせ、その出力だけを集めて自前のモデルに覚えさせれば、<strong>相手の“賢さ”をそっくり写し取る</strong>道具にもなります。Anthropicは2月にも、DeepSeek・Moonshot AI・MiniMaxなど中国の3ラボに同様の手口があったと指摘しており、今回はその規模を大きく上回ります。</p>
+        <p>この告発は、政治も動かしました。書簡を受け、上院議員ら（共和党のハガティ氏、民主党のキム氏）は、<strong>米国AIの出力を不正に使って競合モデルを育てた企業を制裁・取引禁止の対象にする</strong>修正案を、国防関連法案に盛り込む構えを見せています。つまり今回の一件は、<strong>「AIの能力そのものが、国の競争力として守るべき資産になった」</strong>ことを、はっきり映し出しているのです。</p>
+      </section>
+
+      <section class="diagram-section" aria-labelledby="diagram-title">
+        <div class="diagram-head">
+          <p class="eyebrow">Quick Map</p>
+          <h2 id="diagram-title">今回のニュースを図解すると</h2>
+          <p>ポイントは「米中の対立がまた一つ」ではありません。<strong>巨額をかけて育てたAIの“頭脳”が、安価な質問攻めで写し取られ、しかも安全装置だけは受け継がれない</strong>——その非対称さを、この告発が突きつけています。</p>
+        </div>
+        <div class="news-diagram" role="img" aria-label="最先端AIは数千億円規模をかけて育てるが、その答えを大量に集めて自前のモデルに覚えさせる『蒸留』を使えば、はるかに安く能力を写し取れる。しかし写せるのは賢さだけで、元のAIの安全装置や利用ルールは受け継がれない。だから能力を守る仕組みと、真似されにくい本当の価値づくりが問われるという流れを示す図解">
+          <div class="diagram-node node-company">
+            <span class="node-label">前提</span>
+            <strong>最先端AIは“育てる”のに巨額</strong>
+            <small>数千億円規模の資金・人材・電力をかけて、ようやく賢いAIが生まれる。その“頭脳”は企業の最大の資産</small>
+          </div>
+          <div class="diagram-arrow" aria-hidden="true">→</div>
+          <div class="diagram-node node-risk">
+            <span class="node-label">起きたこと</span>
+            <strong>“質問攻め”で頭脳を写し取る</strong>
+            <small>約2万5千の偽アカウントから2,880万回質問し、答えを教材に自前モデルへ蒸留。作るより桁違いに安く能力をコピー</small>
+          </div>
+          <div class="diagram-arrow" aria-hidden="true">→</div>
+          <div class="diagram-node node-government">
+            <span class="node-label">本当の危うさ</span>
+            <strong>安全装置だけが受け継がれない</strong>
+            <small>写せるのは“賢さ”のみ。元のAIに組み込まれた安全ルールやブレーキは引き継がれず、歯止めのないAIが量産されかねない</small>
+          </div>
+          <div class="diagram-result">
+            <span class="result-line"></span>
+            <div>
+              <span class="node-label">私たちの論点</span>
+              <strong>「真似されにくい本当の価値」をどう積み上げるか</strong>
+              <small>能力は写せても、目的・文脈・信頼は写せません。コピーが容易な時代ほど、簡単には真似できない自分の核を育てる発想が効いてきます。</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>なぜ「蒸留」は防ぎにくいのか——賢さは写せても、ブレーキは写せない</h2>
+        <p>「他社のAIに質問するくらい、よくあることでは？」と思うかもしれません。実際、AIに質問して学ぶこと自体は、ふつうの利用です。問題は<strong>規模と意図</strong>。一つひとつは無害に見える質問でも、何千万回ぶんも集めて教材にすれば、相手のAIが時間をかけて身につけた<strong>判断の“型”そのもの</strong>を、まるごと写し取れてしまうのです。会社にたとえれば、<strong>一問一答は誰でもできるのに、その答えを全部書き写されると、虎の巻（ノウハウ集）ごと持ち出される</strong>ようなもの。だから「正常な利用」と「能力の抜き取り」の境目は、とても見分けづらいのです。</p>
+        <p>そして、いちばん怖いのはここから。下の図のように、蒸留で写し取れるのは<strong>“賢さ”という中身だけ</strong>で、元のAIに丁寧に組み込まれた<strong>安全装置（ガードレール）や利用ルールは、いっしょには受け継がれません</strong>。Anthropicが何年もかけて積み上げた「危ない使い方を断る」「悪用を防ぐ」といったブレーキが外れたまま、能力だけがコピーされる。つまり蒸留攻撃の本当のリスクは、知的財産の盗用にとどまらず、<strong>歯止めのない“賢いだけのAI”が、安く大量に出回りかねない</strong>ことにあります。これが、業界が神経をとがらせている理由です。</p>
+        <figure class="news-diagram chart-diagram" role="img" aria-label="蒸留攻撃の仕組みを示すSVG図解。なりすましアカウントの群れが先生モデルのClaudeへ2,880万回の質問を送り、その答えを大量に回収して生徒モデルへ学習させる。先生モデルには安全装置の盾があるが、写し取られた生徒モデルには盾がなく、能力だけがコピーされ安全装置は受け継がれないことを示す">
+          <svg viewBox="0 0 600 380" xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" role="presentation" aria-hidden="true" style="max-width:600px;display:block;margin:0 auto;font-family:inherit;">
+            <defs>
+              <linearGradient id="boxTeacher" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#8fb6ff"/>
+                <stop offset="100%" stop-color="#4f6fd0"/>
+              </linearGradient>
+              <linearGradient id="boxStudent" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#f0a6a6"/>
+                <stop offset="100%" stop-color="#c2504f"/>
+              </linearGradient>
+              <linearGradient id="boxShield" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#8fe6b0"/>
+                <stop offset="100%" stop-color="#3aa86d"/>
+              </linearGradient>
+            </defs>
+            <text x="300" y="26" text-anchor="middle" fill="#c3c9e0" font-size="14">「蒸留攻撃」で何が写し取られるのか</text>
+
+            <!-- 偽アカウント群 -->
+            <text x="92" y="70" text-anchor="middle" fill="#9aa1bd" font-size="12">なりすまし約2万5千</text>
+            <rect x="40" y="80" width="104" height="26" rx="6" fill="#2a2f45" stroke="#c2504f" stroke-width="1.2"/>
+            <text x="92" y="98" text-anchor="middle" fill="#e8ecff" font-size="11">偽アカウント</text>
+            <rect x="48" y="112" width="104" height="26" rx="6" fill="#2a2f45" stroke="#c2504f" stroke-width="1.2"/>
+            <text x="100" y="130" text-anchor="middle" fill="#e8ecff" font-size="11">偽アカウント</text>
+            <rect x="40" y="144" width="104" height="26" rx="6" fill="#2a2f45" stroke="#c2504f" stroke-width="1.2"/>
+            <text x="92" y="162" text-anchor="middle" fill="#e8ecff" font-size="11">偽アカウント</text>
+
+            <!-- 質問の矢印 -->
+            <line x1="156" y1="125" x2="236" y2="125" stroke="#c2504f" stroke-width="2" stroke-opacity="0.8"/>
+            <polygon points="236,125 226,120 226,130" fill="#c2504f"/>
+            <text x="196" y="114" text-anchor="middle" fill="#e0a0a0" font-size="11">2,880万回の質問</text>
+
+            <!-- 先生モデル Claude -->
+            <rect x="240" y="92" width="120" height="66" rx="10" fill="url(#boxTeacher)"/>
+            <text x="300" y="120" text-anchor="middle" fill="#0c1322" font-size="13" font-weight="700">先生モデル</text>
+            <text x="300" y="139" text-anchor="middle" fill="#0c1322" font-size="12">Claude</text>
+            <rect x="252" y="166" width="96" height="24" rx="12" fill="url(#boxShield)"/>
+            <text x="300" y="183" text-anchor="middle" fill="#0c1322" font-size="11" font-weight="700">🛡 安全装置あり</text>
+
+            <!-- 答えの回収 矢印 -->
+            <line x1="360" y1="125" x2="440" y2="125" stroke="#9aa1bd" stroke-width="2" stroke-opacity="0.7"/>
+            <polygon points="440,125 430,120 430,130" fill="#9aa1bd"/>
+            <text x="400" y="114" text-anchor="middle" fill="#9aa1bd" font-size="11">答えを回収</text>
+
+            <!-- 生徒モデル -->
+            <rect x="444" y="92" width="120" height="66" rx="10" fill="url(#boxStudent)"/>
+            <text x="504" y="120" text-anchor="middle" fill="#0c1322" font-size="13" font-weight="700">生徒モデル</text>
+            <text x="504" y="139" text-anchor="middle" fill="#0c1322" font-size="12">写し取られたAI</text>
+            <rect x="456" y="166" width="96" height="24" rx="12" fill="#2a2f45" stroke="#c2504f" stroke-width="1.4" stroke-dasharray="4 3"/>
+            <text x="504" y="183" text-anchor="middle" fill="#e0a0a0" font-size="11" font-weight="700">✕ 安全装置なし</text>
+
+            <!-- 下部メッセージ -->
+            <line x1="60" y1="232" x2="540" y2="232" stroke="#3a3f57" stroke-width="1"/>
+            <text x="300" y="262" text-anchor="middle" fill="#8fb6ff" font-size="13" font-weight="700">写せるのは “賢さ” だけ</text>
+            <text x="300" y="288" text-anchor="middle" fill="#e0a0a0" font-size="13" font-weight="700">受け継がれないのは “ブレーキ”</text>
+            <text x="300" y="324" text-anchor="middle" fill="#8a91ad" font-size="12">能力は安く写し取れても、安全ルールや利用方針はコピーされない。</text>
+            <text x="300" y="344" text-anchor="middle" fill="#8a91ad" font-size="12">だから「歯止めのない賢いAI」が量産されかねない、というのが核心。</text>
+          </svg>
+          <figcaption class="chart-caption">※ 蒸留攻撃の仕組みをわかりやすく示したイメージ図です。偽アカウントの群れが<strong>先生モデルに質問を浴びせて答えを集め</strong>、別のAIに覚えさせる。けれど写し取れるのは<strong>“賢さ”だけ</strong>で、<strong>安全装置（ガードレール）は受け継がれない</strong>——ここに蒸留攻撃のいちばんの危うさがあります。</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>なぜ重要なのか</h2>
+        <p>このニュースが大切なのは、AIをめぐる競争の焦点が<strong>「誰が一番賢いAIを作るか」から「育てた賢さを、どう守り抜くか」へ</strong>と移りはじめたことを、はっきり示したからです。最先端AIの開発には、想像を超えるお金と労力がかかります。にもかかわらず、その<strong>成果だけを安価に写し取れる</strong>なら、苦労して先頭を走る側はいつも追いつかれ、<strong>「作るより真似るほうが得」</strong>という非対称が生まれてしまう。これは一社の損得ではなく、<strong>新しいものを生み出す挑戦そのものに、報われる仕組みがあるか</strong>という、私たち全員に関わる問いです。</p>
+        <p>そしてもう一つ。蒸留で<strong>安全装置の外れた賢いAI</strong>が安く出回れば、その影響は国境を越えて私たちの暮らしに届きます。詐欺やサイバー攻撃に悪用されやすいAIが増えれば、被害を受けるのは結局、ふつうに暮らす一人ひとりです。だからこそ各国は、<strong>AIの能力を“守るべき資産”として扱い始めた</strong>。今日のニュースは、AIが単なる便利な道具を超えて、<strong>国の競争力と安全に直結するインフラ</strong>になったことを、静かに、しかしはっきりと告げています。</p>
+      </section>
+
+      <section>
+        <h2>人間側に問われること</h2>
+        <p>この出来事は、私たち一人ひとりの働き方にも、そっと問いを投げかけます。それは<strong>「あなたの価値は、簡単に写し取れるものですか？」</strong>という問いです。AIの能力がこれほど安くコピーできる時代には、<strong>“誰でもできること”の値打ちは、どんどん下がっていきます</strong>。けれど落ち込む必要はありません。裏を返せば、<strong>簡単には真似できないもの——あなた自身の目的意識、積み重ねた文脈、人との信頼関係——の値打ちは、むしろ上がっていく</strong>からです。</p>
+        <p>蒸留で写せるのは「答え方」までで、<strong>「なぜそれをやるのか」という意志や、相手との関係のなかで育つ判断は写せません</strong>。だから大切なのは、AIと張り合って“賢さ”を競うことではなく、<strong>AIには写し取れない自分の核を、ていねいに育てる</strong>こと。便利な能力は道具として遠慮なく借りつつ、最後に効いてくる「あなたらしさ」を手放さない——その線引きが、コピーがあふれる時代ほど、あなたを守る力になります。</p>
+      </section>
+
+      <section>
+        <h2>私たちにできること</h2>
+        <p>今日からできる小さな一歩は、AIを<strong>「自分を置き換えるもの」ではなく「自分の核を際立たせる道具」として使う</strong>ことです。たとえば、AIに下調べや下書きを任せて時間を生み、その時間を<strong>あなたにしか語れない経験や、目の前の相手に合わせた工夫</strong>に振り向ける。能力の量で競うのをやめ、<strong>「これは自分だからこそできた」と言える部分</strong>を、一つでも多く仕事に残していく。それだけで、コピーに埋もれない“あなたの輪郭”がくっきりしてきます。</p>
+        <p>蒸留が問いかけるのは、決して暗い未来ではありません。むしろ<strong>「能力は借りられる時代だからこそ、人間は“意味”や“信頼”という本当の価値に集中できる」</strong>という、前向きな転換点です。覚えておきたいのはただ一つ——<strong>真似されて困るのは“答え”だけ。あなたが何を大切に、なぜそれをするのかは、誰にも蒸留できない</strong>。その核を抱きしめながら、好奇心と落ち着きの両方を手に、今日もAIと一緒に歩んでいきましょう。</p>
+      </section>
+
+      <section class="paper-pick" aria-labelledby="paper-pick-title">
+        <p class="eyebrow">Today's Paper Pick</p>
+        <h2 id="paper-pick-title">今日のピックアップ論文</h2>
+        <p class="paper-note">今回のニュースの核心——「公開されているAIへの質問から、その能力は本当に写し取れてしまうのか」「それを防ぐ手立てはあるのか」——を、正面から論じた論文をピックアップしました（arXiv・2026年2月公開。今日と同じ日付の論文が本稿執筆時点で確認できなかったため、ニュースのテーマにもっとも近い最新の研究を取り上げています）。蒸留攻撃という見えにくい脅威が、研究の地図の上ではっきり姿を現します。</p>
+        <article class="paper-card">
+          <div class="paper-meta">
+            <span>arXiv:2602.03396 / 2026年2月3日</span>
+            <span>蒸留耐性 / モデル抽出 / 情報理論 / ガードレール / LLM防御</span>
+          </div>
+          <h3>Towards Distillation-Resistant Large Language Models: An Information-Theoretic Perspective</h3>
+          <p class="paper-authors">「蒸留に強いAI」を情報理論で設計する——Hao Fang ほか（2026年2月）。公開APIから能力を写し取られる蒸留に、出力をどう“整える”ことで抗えるかを論じた研究</p>
+          <p>この論文は、まさに今日のニュースの<strong>「公開されたAIに質問を浴びせれば、その賢さを写し取れてしまう」</strong>という不安が、技術的にどこまで本当で、どうすれば抑えられるのかを、根っこから見せてくれる一本です。著者らは、AIの答え（出力）にどれだけ<strong>“真似に役立つ手がかり”が漏れているか</strong>を、<strong>条件付き相互情報量（CMI）</strong>という物差しで測りました。そのうえで、答えの<strong>有用さは保ったまま、真似に使われやすい部分だけを薄める“変換”</strong>をかける防御法を提案しています。</p>
+          <div class="paper-grid">
+            <div>
+              <strong>何を調べた？</strong>
+              <p>公開APIとして使えるAIの出力から、どれだけ蒸留（能力の写し取り）に役立つ情報が漏れているかを、情報理論の指標で定量化した。</p>
+            </div>
+            <div>
+              <strong>何がわかった？</strong>
+              <p>答えの確からしさ（ロジット）には“真似のための教材”が思いのほか多く含まれる。その手がかりだけを薄める変換で、有用さを保ちつつ蒸留耐性を高められると示した。</p>
+            </div>
+            <div>
+              <strong>なぜ大事？</strong>
+              <p>蒸留攻撃が「防ぎようのない宿命」ではなく、設計次第で抑え込める対象だと裏づける。今日のニュースが投げかけた“能力をどう守るか”に、現実的な足場を与える。</p>
+            </div>
+          </div>
+          <p>「いったん公開したAIは、写し取られても仕方ない」——そんなあきらめを、この研究はやさしく押し戻します。鍵は、<strong>答えの“役立つ中身”と“真似に使われる手がかり”を切り分ける</strong>という発想。そう考えたからこそ、便利さを損なわずに蒸留だけを抑える、という難しい両立が見えてきました。今日のニュースと合わせて読むと、Anthropicの告発が一企業のいらだちにとどまらず、<strong>研究が描く「育てた能力を守る」流れ</strong>の上にあることが、くっきり見えてきます。AIの進歩は、より賢いモデルを作る競争だけでなく、<strong>その賢さを、納得できる形で守り、分かち合う工夫</strong>からも生まれていくのです。</p>
+          <a class="paper-link" href="https://arxiv.org/abs/2602.03396" target="_blank" rel="noopener">論文を読む</a>
+        </article>
+      </section>
+
+      <section aria-labelledby="related-note-title">
+        <p class="eyebrow">Related Read</p>
+        <h2 id="related-note-title">あわせて読みたい note</h2>
+        <p>今日のテーマ「<strong>能力は写せても、あなたの本当の価値は写せない</strong>」を、もう一歩実践に落としたい方へ。AI共創イノベーションの<strong>佐藤源彦</strong>さんが、自分の作品やサービスの<strong>「他とは違う強み」をAIと一緒に言葉にする方法</strong>を、わかりやすく解説しています。<strong>「過小評価も自画自賛もせず、自分だけの値打ちを正しく伝える」</strong>——コピーがあふれる時代に、真似されにくい輪郭を描くためのヒントが詰まった一本です。</p>
+        <div class="top-paper">
+          <span>佐藤源彦@MBBS / note</span>
+          <strong>自分の作品をうまく説明できない人必見！AIレビューでマーケティング戦略！「過小評価」も「自画自賛」もしないCMをしよう！</strong>
+          <p>似た作品と比べながら、AIの力で“自分だけの強み”を見つけ、過不足なく伝えるための実践法。能力が簡単に真似される時代に、置き換えられない自分の価値を言葉にするためのコンパスになる一本です。</p>
+          <a class="paper-link" href="https://note.com/mbbs/n/n2276d4efd935" target="_blank" rel="noopener">noteを読む →</a>
+        </div>
+      </section>
+
+      <section id="sources" class="source-box">
+        <h2>参考にした主な情報</h2>
+        <ul>
+          <li><a href="https://www.cnbc.com/2026/06/24/anthropic-alibaba-distillation-campaign.html" target="_blank" rel="noopener">CNBC: Anthropic accuses Alibaba of campaign to 'brazenly' and 'illicitly' extract AI capabilities（2026年6月24日）</a></li>
+          <li><a href="https://www.techtimes.com/articles/319105/20260625/alibaba-ran-largest-known-ai-theft-campaign-against-claude-anthropic-tells-senate.htm" target="_blank" rel="noopener">Tech Times: Alibaba Ran Largest Known AI Theft Campaign Against Claude, Anthropic Tells Senate（2026年6月25日）</a></li>
+          <li><a href="https://easternherald.com/2026/06/27/anthropic-alibaba-claude-distillation-senate-sanctions/" target="_blank" rel="noopener">Eastern Herald: Congress Prepares to Sanction Chinese AI Rivals After Anthropic Accuses Alibaba（2026年6月27日）</a></li>
+          <li><a href="https://www.inc.com/hazel-gandhi/anthropic-accused-alibaba-of-a-distillation-attack-heres-what-that-means-and-why-its-so-dangerous/91365906" target="_blank" rel="noopener">Inc.: Anthropic Accused Alibaba of a Distillation Attack. Here's What That Means—and Why It's So Dangerous（2026年6月）</a></li>
+          <li><a href="https://arxiv.org/abs/2602.03396" target="_blank" rel="noopener">論文: Towards Distillation-Resistant Large Language Models: An Information-Theoretic Perspective（arXiv 2026年2月）</a></li>
+        </ul>
+      </section>
+
+      <section class="link-band article-links">
+        <div>
+          <p class="eyebrow">Follow</p>
+          <h2>AI共創イノベーション</h2>
+        </div>
+        <div class="channel-links">
+          <a class="pending-link" href="https://www.youtube.com/@AICoCreation" target="_blank" rel="noopener">AI共創イノベーション YouTube</a>
+          <a class="pending-link" href="https://note.com/mbbs" target="_blank" rel="noopener">佐藤源彦 note</a>
+        </div>
+      </section>
+
+      <a class="back-button bottom" href="index.html">← トップへ戻る</a>
+    </article>
+  </main>
+</body>
+</html>
