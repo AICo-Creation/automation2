@@ -1,0 +1,266 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>出前アプリの会社が、Nvidiaなしで1.6兆パラメータAIを完走させた——Meituan「LongCat-2.0」が崩す“チップの壁” | AI共創ニュース</title>
+  <meta name="description" content="2026年7月のAIニュース。中国Meituan（美団）が、5万枚規模の中国製チップだけで1.6兆パラメータの大規模言語モデル「LongCat-2.0」を学習から大規模運用まで完走させ、MITライセンスで無料公開。コーディング性能はGPT-5.5に迫り、Nvidia依存と輸出規制という“チップの壁”が崩れ始めた意味をやさしく解説します。">
+  <meta name="keywords" content="LongCat-2.0,Meituan,美団,中国製チップ,Ascend,Huawei,MoE,Mixture of Experts,オープンソースAI,Nvidia輸出規制,GPT-5.5,Gemini,半導体,LLM,生成AI,新AIモデル,AI共創ニュース,AI共創イノベーション,AIニュース 2026年7月1日">
+  <meta property="og:title" content="出前アプリの会社が、Nvidiaなしで1.6兆パラメータAIを完走させた——Meituan「LongCat-2.0」が崩す“チップの壁”">
+  <meta property="og:description" content="中国Meituanが、5万枚規模の中国製チップだけで1.6兆パラメータAI『LongCat-2.0』を学習から大規模運用まで完走させ、MITライセンスで無料公開。コーディング性能はGPT-5.5に迫り、Nvidia依存と輸出規制という“チップの壁”が崩れ始めた意味を読み解きます。">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="title.png">
+  <link rel="canonical" href="./2026-07-01.html">
+  <link rel="stylesheet" href="styles.css">
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "出前アプリの会社が、Nvidiaなしで1.6兆パラメータAIを完走させた——Meituan「LongCat-2.0」が崩す“チップの壁”",
+    "datePublished": "2026-07-01",
+    "dateModified": "2026-07-01",
+    "inLanguage": "ja",
+    "author": {
+      "@type": "Organization",
+      "name": "AI共創ニュース"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "AI共創イノベーション"
+    },
+    "image": "title.png",
+    "description": "中国Meituanが、5万枚規模の中国製チップだけで1.6兆パラメータの大規模言語モデル『LongCat-2.0』を学習から大規模運用まで完走させ、MITライセンスで無料公開。コーディング性能はGPT-5.5に迫り、Nvidia依存と輸出規制という“チップの壁”が崩れ始めた意味を、最新研究と合わせて解説します。"
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "LongCat-2.0とは何ですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "中国Meituan（美団、出前・生活サービスのプラットフォーム企業）が開発した1.6兆パラメータの大規模言語モデルです。Mixture of Experts（専門家混合）構造で、トークンごとに実際に動くのは一部の専門家のみ。コーディング性能はGPT-5.5に迫る水準で、MITライセンスのオープンソースとして無料公開されました。"
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "なぜ「中国製チップだけで学習」したことが大きなニュースなのですか？",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "アメリカは先端AIチップ（Nvidiaの最新GPUなど）の対中輸出を制限し、中国の最先端AI開発を遅らせる狙いがありました。しかしLongCat-2.0は、5万枚規模の中国製チップだけで巨大モデルの学習から大規模運用までを完走させたとされ、輸出規制という“壁”の実効性に疑問を投げかけているからです。"
+        }
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <div class="space-field" aria-hidden="true"></div>
+  <header class="site-header">
+    <a class="brand" href="index.html">
+      <span class="brand-mark"></span>
+      <span>AI共創ニュース</span>
+    </a>
+    <nav class="site-nav" aria-label="主要リンク">
+      <a href="index.html">Home</a>
+      <a href="#sources">Sources</a>
+    </nav>
+  </header>
+
+  <main class="article-layout">
+    <a class="back-button" href="index.html">← トップへ戻る</a>
+
+    <article class="article-shell">
+      <p class="eyebrow">2026.07.01 / AI Co-Creation Briefing</p>
+      <h1>出前アプリの会社が、Nvidiaなしで1.6兆パラメータAIを完走させた——Meituan「LongCat-2.0」が崩す“チップの壁”</h1>
+      <p class="article-lead">「最先端のAIを育てるには、Nvidiaの最高級GPUが要る」——この前提が、静かに揺らぎ始めています。出前や生活サービスのアプリでおなじみの中国<strong>Meituan（美団）</strong>が、Nvidiaを一切使わず、<strong>5万枚規模の中国製チップだけ</strong>で<strong>1.6兆パラメータ</strong>のAI「<strong>LongCat-2.0</strong>」を学習から大規模運用まで完走させ、<strong>無料・オープンソース</strong>で世界に公開しました。コーディング性能は最先端モデルGPT-5.5に迫る水準。アメリカが対中輸出を制限してまで守ろうとした<strong>“チップの壁”</strong>が、思ったより低くなりつつある——そんな現実を映し出す出来事を、やさしくほどいていきます。</p>
+
+      <section>
+        <h2>何が起きたのか</h2>
+        <p>2026年6月30日、中国の生活サービス大手<strong>Meituan（美団）</strong>が、大規模言語モデル「<strong>LongCat-2.0</strong>」をオープンソースとして公開しました。パラメータ数は<strong>1.6兆</strong>。ただし全部を一度に動かすわけではなく、<strong>Mixture of Experts（専門家混合・MoE）</strong>という構造で、1つのトークンを処理するたびに実際に働くのは数百億パラメータぶんの「専門家」だけ。30兆トークンを超える学習データを使い、コンテキスト長は<strong>100万トークン</strong>に対応します。</p>
+        <p>最大のポイントは、学習方法です。LongCat-2.0は<strong>5万枚規模の中国製AIチップのクラスター</strong>だけを使い、ゼロからの事前学習・微調整・大規模運用までを、<strong>ロールバックなし・致命的な損失急増（ロススパイク）なし</strong>でやり遂げたとされています。使われたチップの詳細は公表されていませんが、学習に使われた通信ライブラリの痕跡などから、Huawei製「Ascend」系チップの可能性が高いと見られています。性能面でも、コーディング能力を測る<strong>SWE-bench Pro</strong>で59.5点を記録し、OpenAIの<strong>GPT-5.5（58.6点）</strong>を上回りました。総合力ではGoogleの<strong>Gemini 3.1 Pro</strong>に匹敵するとも評されています。そしてこのモデルは、商用利用も自由な<strong>MITライセンス</strong>でHugging Face上に重みごと公開され、AI開発者向けプラットフォームOpenRouterの利用ランキングでも上位に立ちました。</p>
+        <p>注目したいのは、これを成し遂げたのが純粋なAI研究機関ではなく、<strong>出前・配車・旅行予約などを手がける生活サービス企業</strong>だという点です。最先端AIの開発が、一握りの専門ラボだけのものではなくなりつつあることを、この一件は静かに示しています。</p>
+      </section>
+
+      <section class="diagram-section" aria-labelledby="diagram-title">
+        <div class="diagram-head">
+          <p class="eyebrow">Quick Map</p>
+          <h2 id="diagram-title">今回のニュースを図解すると</h2>
+          <p>ポイントは「また中国が新しいAIを出した」ではありません。<strong>輸出規制で守ろうとした“チップの壁”そのものが、エンジニアリングの工夫で越えられる範囲に入ってきた</strong>——その潮目を、この出来事が映し出しています。</p>
+        </div>
+        <div class="news-diagram" role="img" aria-label="Nvidiaの最先端GPUが最先端AI開発の前提だったが、出前アプリで知られるMeituanが中国製チップだけで1.6兆パラメータのAIを学習から運用まで完走させ無料公開した。これにより、最先端AIの力を生む条件はもはやチップの種類だけで決まらなくなり、誰がその力を一番うまく使いこなすかへ競争の軸が移り始めているという流れを示す図解">
+          <div class="diagram-node node-company">
+            <span class="node-label">前提</span>
+            <strong>Nvidiaのチップが“必須”だった</strong>
+            <small>最先端AIを育てるには、性能の高いNvidiaの最新GPUが事実上の前提。アメリカはその対中輸出を制限し、最先端AI開発を遅らせようとした</small>
+          </div>
+          <div class="diagram-arrow" aria-hidden="true">→</div>
+          <div class="diagram-node node-risk">
+            <span class="node-label">起きたこと</span>
+            <strong>出前アプリの会社が完走させた</strong>
+            <small>Meituanが5万枚規模の中国製チップだけで1.6兆パラメータAIを学習から大規模運用まで完走させ、MITライセンスで無料公開した</small>
+          </div>
+          <div class="diagram-arrow" aria-hidden="true">→</div>
+          <div class="diagram-node node-government">
+            <span class="node-label">本当の意味</span>
+            <strong>チップの壁は“越えられる”段階に</strong>
+            <small>性能差はもはや絶対的な障壁ではなく、工学的な工夫で埋められる範囲に。輸出規制だけでは最先端AIの広がりを止めきれない</small>
+          </div>
+          <div class="diagram-result">
+            <span class="result-line"></span>
+            <div>
+              <span class="node-label">私たちの論点</span>
+              <strong>「誰が一番強いチップを持つか」から「誰がその力を使いこなすか」へ</strong>
+              <small>強いAIが無料で誰でも使える時代には、AIを持っていること自体の価値は薄まり、それをどう使うかの差が際立っていきます。</small>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <h2>なぜ「壁」は崩れたのか——足りないチップを、工夫で埋める</h2>
+        <p>不思議に思うかもしれません。性能で劣るチップを5万枚束ねただけで、なぜ最先端級のAIが学習できるのでしょうか。答えは「足し算」ではなく「作り込み」にあります。巨大なAIの学習では、何万枚ものチップが一糸乱れず連携する必要があり、通信の不具合・メモリ不足・計算誤差の蓄積など、つまずきの種は無数にあります。性能の高いチップなら多少の無駄があっても押し切れますが、<strong>そうでないチップでは、ひとつの不具合が学習全体を止めかねません</strong>。だからこそMeituanのチームは、通信障害への対処、メモリ逼迫の回避、数値の誤差を検証し続ける仕組みなどを、地道に積み上げる必要がありました。</p>
+        <p>つまりLongCat-2.0が示したのは、<strong>「最高のチップがなくても、最後まで壊れずに学習を完走させる技術」が実際に確立されつつある</strong>ということです。下の図のように、必要なのはチップそのものの強さだけでなく、<strong>限られた条件でも歩みを止めない作り込みの力</strong>。これは中国一国の話にとどまりません。誰もが最高の道具を持てるわけではない私たちの仕事にも、同じ構図が重なります。</p>
+        <figure class="news-diagram chart-diagram" role="img" aria-label="LongCat-2.0の学習の流れを示すSVG図解。5万枚規模の中国製チップクラスターが1.6兆パラメータのAIを学習し、ロールバックなしで完走させる。完成したモデルはMITライセンスでオープンソース公開され、世界中の開発者が無料で利用できるようになる、という流れを示す">
+          <svg viewBox="0 0 600 320" xmlns="http://www.w3.org/2000/svg" width="100%" height="auto" role="presentation" aria-hidden="true" style="max-width:600px;display:block;margin:0 auto;font-family:inherit;">
+            <defs>
+              <linearGradient id="boxChip" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#8fb6ff"/>
+                <stop offset="100%" stop-color="#4f6fd0"/>
+              </linearGradient>
+              <linearGradient id="boxModel" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#8fe6b0"/>
+                <stop offset="100%" stop-color="#3aa86d"/>
+              </linearGradient>
+              <linearGradient id="boxWorld" x1="0" y1="0" x2="0" y2="1">
+                <stop offset="0%" stop-color="#f0d6a6"/>
+                <stop offset="100%" stop-color="#c2954f"/>
+              </linearGradient>
+            </defs>
+            <text x="300" y="26" text-anchor="middle" fill="#c3c9e0" font-size="14">LongCat-2.0が「チップの壁」を越えた道筋</text>
+
+            <rect x="36" y="60" width="140" height="78" rx="10" fill="url(#boxChip)"/>
+            <text x="106" y="92" text-anchor="middle" fill="#0c1322" font-size="13" font-weight="700">中国製チップ</text>
+            <text x="106" y="110" text-anchor="middle" fill="#0c1322" font-size="12">クラスター 5万枚</text>
+            <text x="106" y="126" text-anchor="middle" fill="#0c1322" font-size="11">（Nvidia不使用）</text>
+
+            <line x1="176" y1="99" x2="244" y2="99" stroke="#9aa1bd" stroke-width="2" stroke-opacity="0.8"/>
+            <polygon points="244,99 234,94 234,104" fill="#9aa1bd"/>
+            <text x="210" y="86" text-anchor="middle" fill="#9aa1bd" font-size="11">学習を完走</text>
+
+            <rect x="248" y="60" width="140" height="78" rx="10" fill="url(#boxModel)"/>
+            <text x="318" y="92" text-anchor="middle" fill="#0c1322" font-size="13" font-weight="700">LongCat-2.0</text>
+            <text x="318" y="110" text-anchor="middle" fill="#0c1322" font-size="12">1.6兆パラメータ</text>
+            <text x="318" y="126" text-anchor="middle" fill="#0c1322" font-size="11">ロールバックなし</text>
+
+            <line x1="388" y1="99" x2="456" y2="99" stroke="#9aa1bd" stroke-width="2" stroke-opacity="0.8"/>
+            <polygon points="456,99 446,94 446,104" fill="#9aa1bd"/>
+            <text x="422" y="86" text-anchor="middle" fill="#9aa1bd" font-size="11">無料公開</text>
+
+            <rect x="460" y="60" width="116" height="78" rx="10" fill="url(#boxWorld)"/>
+            <text x="518" y="92" text-anchor="middle" fill="#0c1322" font-size="13" font-weight="700">世界中の</text>
+            <text x="518" y="110" text-anchor="middle" fill="#0c1322" font-size="12">開発者が利用</text>
+            <text x="518" y="126" text-anchor="middle" fill="#0c1322" font-size="11">MITライセンス</text>
+
+            <line x1="60" y1="190" x2="540" y2="190" stroke="#3a3f57" stroke-width="1"/>
+            <text x="300" y="222" text-anchor="middle" fill="#8fb6ff" font-size="13" font-weight="700">必要なのはチップの強さだけではない</text>
+            <text x="300" y="248" text-anchor="middle" fill="#8fe6b0" font-size="13" font-weight="700">最後まで壊れずに歩み続ける作り込みの力</text>
+            <text x="300" y="280" text-anchor="middle" fill="#8a91ad" font-size="12">通信障害・メモリ逼迫・数値誤差を一つずつ潰し、学習を完走させた。</text>
+            <text x="300" y="300" text-anchor="middle" fill="#8a91ad" font-size="12">限られた条件でも前へ進む工夫が、最先端への近道になった。</text>
+          </svg>
+          <figcaption class="chart-caption">※ LongCat-2.0の学習がたどった流れをイメージで示した図です。<strong>5万枚規模の中国製チップ</strong>だけで学習を<strong>完走</strong>させ、できあがったモデルを<strong>MITライセンスで無料公開</strong>。チップの性能差そのものより、<strong>最後まで壊れず学習を続け切る工夫</strong>が鍵になったことが見えてきます。</figcaption>
+        </figure>
+      </section>
+
+      <section>
+        <h2>なぜ重要なのか</h2>
+        <p>このニュースが大切なのは、<strong>「最先端AIの力は、チップを制限すれば抑え込める」という前提</strong>が、思ったほど盤石ではないと示したからです。アメリカは高性能AIチップの対中輸出を制限することで、中国の最先端AI開発に歯止めをかけようとしてきました。しかしLongCat-2.0は、その制約の中でも<strong>巨大なAIを最後まで学習させ切る技術が育っていること</strong>を見せつけました。これは一企業の成果にとどまらず、<strong>「強さは持っている道具だけで決まらない」という、より大きな現実</strong>を映し出しています。</p>
+        <p>そしてもう一つ。LongCat-2.0は<strong>無料・オープンソース</strong>で公開されました。最先端に迫る性能のAIが、国籍やチップの出どころに関係なく、誰でもダウンロードして使える時代に近づいているのです。これまで「最強のAI」は限られた企業・国だけのものでしたが、その壁は性能面でも価格面でも、急速に低くなっています。便利さが広がる一方で、<strong>強力なAIが歯止めなく拡散することのリスク</strong>も、これまで以上に向き合うべき課題になっていきます。</p>
+      </section>
+
+      <section>
+        <h2>人間側に問われること</h2>
+        <p>「最高のチップがなくても、最後まで完走させる工夫があれば、最先端に届く」——この出来事は、私たちの働き方にもそっと重なります。多くの人は、<strong>自分には足りないもの（時間、資金、最新の道具）ばかりに目が向きがち</strong>です。けれどLongCat-2.0が教えてくれるのは、<strong>足りない条件を嘆くより、与えられた条件の中で最後まで丁寧にやり切る工夫のほうが、結果を分ける</strong>ということ。最強の環境を待ってから動くのではなく、今ある手持ちのもので、壊れずに前へ進み続ける力こそが効いてきます。</p>
+        <p>そしてもう一つ。強いAIが誰でも無料で使える時代には、<strong>「強いAIを持っていること」自体は、もう差にならなくなっていきます</strong>。差がつくのは、その力を<strong>何のために、どう丁寧に使うか</strong>という一段上の部分です。道具の強さで張り合うのをやめ、<strong>使いこなす側の判断力・粘り強さ</strong>を磨くことが、これからの自分の価値になっていきます。</p>
+      </section>
+
+      <section>
+        <h2>私たちにできること</h2>
+        <p>今日からできる小さな一歩は、<strong>「最高の道具が手に入ってから始める」発想を手放す</strong>ことです。手元にあるAIや時間、スキルがどれだけ“最先端”かを気にするより、<strong>今ある条件で、最後までやり切る小さな積み重ね</strong>を選んでみる。LongCat-2.0のチームが、不具合をひとつずつ潰しながら学習を完走させたように、私たちも目の前のタスクを、<strong>壊れずに最後までやり通す</strong>ことを大切にしたいものです。</p>
+        <p>そしてもう一つ。無料で使える強力なAIが増えるいまこそ、<strong>「持っているか」ではなく「どう使うか」で差をつける</strong>意識を育てましょう。覚えておきたいのはただ一つ——<strong>道具の壁は、いずれ誰かが越えてくる。最後まで残るのは、それをどう使うかというあなた自身の判断と粘り強さ</strong>です。その軸を持ちながら、好奇心と落ち着きの両方を手に、今日もAIと一緒に歩んでいきましょう。</p>
+      </section>
+
+      <section class="paper-pick" aria-labelledby="paper-pick-title">
+        <p class="eyebrow">Today's Paper Pick</p>
+        <h2 id="paper-pick-title">今日のピックアップ論文</h2>
+        <p class="paper-note">今回のニュースの核心——「中国製チップだけで、本当に兆パラメータ級のAIを最後まで学習させ切れるのか」——を、技術報告として正面から論じた論文をピックアップしました（arXiv・2025年12月公開。今日と同じ日付の論文が本稿執筆時点で確認できなかったため、ニュースのテーマにもっとも近い最新の研究を取り上げています）。LongCat-2.0と同じ「中国製チップで巨大MoEを完走させる」挑戦を、別の開発チームがどう実現したかが見えてきます。</p>
+        <article class="paper-card">
+          <div class="paper-meta">
+            <span>arXiv:2512.24157 / 2025年12月</span>
+            <span>MoE / Ascend NPU / 大規模分散学習 / 数値精度検証 / 訓練インフラ</span>
+          </div>
+          <h3>Training Report of TeleChat3-MoE</h3>
+          <p class="paper-authors">中国TeleAIによる技術報告。1,050億〜1兆パラメータ超のMoEモデル群を、Huawei「Ascend」NPUクラスター上で最初から最後まで学習させた基盤技術をまとめている</p>
+          <p>この論文は、まさに今日のニュースの<strong>「中国製チップだけで、巨大なMoEモデルを壊れずに学習させ切れるのか」</strong>という問いに、別の開発チームの立場から具体的な答えを示した一本です。著者らは、Ascend NPUクラスター上で<strong>演算子レベル・全体レベルの数値精度を検証</strong>する手法を整え、ハードウェアや並列化の方式が変わっても結果が揺らがないようにしました。そのうえで、パイプラインを工夫して待ち時間を減らす<strong>インターリーブ式スケジューリング</strong>や、長文学習向けの<strong>注意機構を考慮したデータ配分</strong>、専門家並列の<strong>通信の重ね合わせ</strong>など、複数の最適化を積み上げています。</p>
+          <div class="paper-grid">
+            <div>
+              <strong>何を調べた？</strong>
+              <p>1兆パラメータ級のMoEモデルを、Huawei Ascend NPUクラスターだけで、学習開始から運用まで安定して完走させるための基盤技術。</p>
+            </div>
+            <div>
+              <strong>何がわかった？</strong>
+              <p>数値精度の検証・通信の重ね合わせ・パイプライン設計などを丁寧に積み上げれば、特定メーカーの最高級GPUに頼らずとも、巨大MoEの学習を最後まで完走できる。</p>
+            </div>
+            <div>
+              <strong>なぜ大事？</strong>
+              <p>LongCat-2.0が一企業の偶然の成果ではなく、中国国内で再現されつつある「土台技術」の上にあることを裏づける。今日のニュースが示す“チップの壁の崩れ方”に、技術的な足場を与える。</p>
+            </div>
+          </div>
+          <p>「最高のチップがなければ、最先端のAIは作れない」——そんな思い込みを、この研究はやさしく押し戻します。鍵は、<strong>足りない部分を力技で埋めるのではなく、不具合の芽を一つずつ丁寧に潰していく</strong>という発想。そう考えたからこそ、限られたハードウェアでも、最後まで壊れずに学習をやり切るという難しい挑戦が実を結びました。今日のニュースと合わせて読むと、Meituanの一件が単発の話題ではなく、<strong>「持っている道具より、使い切る工夫」を積み上げる流れ</strong>の上にあることが、くっきり見えてきます。</p>
+          <a class="paper-link" href="https://arxiv.org/abs/2512.24157" target="_blank" rel="noopener">論文を読む</a>
+        </article>
+      </section>
+
+      <section aria-labelledby="related-note-title">
+        <p class="eyebrow">Related Read</p>
+        <h2 id="related-note-title">あわせて読みたい note</h2>
+        <p>今日のテーマ「<strong>最高の道具がなくても、使いこなす工夫で最先端に届く</strong>」を、もう一歩実践に落としたい方へ。AI共創イノベーションの<strong>佐藤源彦</strong>さんが、無料で使えるオープンソースの最強級ローカルLLM「GLM-5.2」の性能としくみを、<strong>わかりやすく丁寧に解説</strong>しています。<strong>「強いAIは、もう一部の企業だけのものではない」</strong>——LongCat-2.0のニュースと響き合う、今日読みたい一本です。</p>
+        <div class="top-paper">
+          <span>佐藤源彦@MBBS / note</span>
+          <strong>GLM-5.2 Surpasses Claude Fable 5 in Some Scores! Exploring the Full Scope of the Performance and Mechanisms of the Strongest Open-Source Local LLM</strong>
+          <p>無料・オープンソースのローカルLLM「GLM-5.2」が、一部スコアで有料の最強モデルを上回る性能を見せた理由を、しくみからわかりやすく解説。強いAIが“誰でも使えるもの”へ近づく時代の手応えをつかめる一本です。</p>
+          <a class="paper-link" href="https://note.com/mbbs/n/n024f2fb4d84c" target="_blank" rel="noopener">noteを読む →</a>
+        </div>
+      </section>
+
+      <section id="sources" class="source-box">
+        <h2>参考にした主な情報</h2>
+        <ul>
+          <li><a href="https://siliconangle.com/2026/06/30/chinas-meituan-open-sources-massive-longcat-2-0-ai-model-saying-trained-domestic-chips/" target="_blank" rel="noopener">SiliconANGLE: China's Meituan open-sources massive LongCat-2.0 AI model, saying it was trained on domestic chips（2026年6月30日）</a></li>
+          <li><a href="https://www.scmp.com/tech/tech-trends/article/3358854/china-debuts-biggest-ai-model-trained-local-chips-meituan-releases-longcat-20" target="_blank" rel="noopener">South China Morning Post: China debuts biggest AI model trained on local chips, as Meituan releases LongCat-2.0（2026年6月）</a></li>
+          <li><a href="https://venturebeat.com/technology/meituan-open-sources-longcat-2-0-the-1-6t-near-frontier-agentic-coding-model-thats-been-leading-openrouter-trained-entirely-on-chinese-chips" target="_blank" rel="noopener">VentureBeat: Meituan open sources LongCat-2.0, the 1.6T near-frontier agentic coding model trained entirely on Chinese chips（2026年6月）</a></li>
+          <li><a href="https://cybernews.com/ai-news/meituan-trillion-parameter-ai-model-china-chips/" target="_blank" rel="noopener">Cybernews: China's Meituan says it has built a massive new AI model using only domestic chips（2026年6月）</a></li>
+          <li><a href="https://www.longcatai.org/" target="_blank" rel="noopener">LongCat AI 公式サイト: LongCat-2.0 Trillion-Parameter Agentic Coding Model</a></li>
+          <li><a href="https://arxiv.org/abs/2512.24157" target="_blank" rel="noopener">論文: Training Report of TeleChat3-MoE（arXiv 2025年12月）</a></li>
+        </ul>
+      </section>
+
+      <section class="link-band article-links">
+        <div>
+          <p class="eyebrow">Follow</p>
+          <h2>AI共創イノベーション</h2>
+        </div>
+        <div class="channel-links">
+          <a class="pending-link" href="https://www.youtube.com/@AICoCreation" target="_blank" rel="noopener">AI共創イノベーション YouTube</a>
+          <a class="pending-link" href="https://note.com/mbbs" target="_blank" rel="noopener">佐藤源彦 note</a>
+        </div>
+      </section>
+
+      <a class="back-button bottom" href="index.html">← トップへ戻る</a>
+    </article>
+  </main>
+</body>
+</html>
